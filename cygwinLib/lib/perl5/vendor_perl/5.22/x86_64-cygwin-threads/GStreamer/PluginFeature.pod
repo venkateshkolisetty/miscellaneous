@@ -1,0 +1,76 @@
+=head1 NAME
+
+GStreamer::PluginFeature
+
+=cut
+
+=head1 HIERARCHY
+
+  Glib::Object
+  +----GStreamer::Object
+       +----GStreamer::PluginFeature
+
+
+
+=cut
+
+
+=head1 METHODS
+
+=head2 boolean = $feature-E<gt>B<check_version> ($min_major, $min_minor, $min_micro)
+
+=over
+
+=item * $min_major (integer) 
+
+=item * $min_minor (integer) 
+
+=item * $min_micro (integer) 
+
+=back
+
+=head2 pluginfeature = $feature-E<gt>B<load> 
+
+=head2 string = $feature-E<gt>B<get_name> 
+
+=head2 $feature-E<gt>B<set_name> ($name)
+
+=over
+
+=item * $name (string) 
+
+=back
+
+=head2 integer = $feature-E<gt>B<get_rank> 
+
+=head2 $feature-E<gt>B<set_rank> ($rank)
+
+=over
+
+=item * $rank (integer) 
+
+=back
+
+
+
+=cut
+
+
+=head1 SEE ALSO
+
+L<GStreamer>, L<Glib::Object>, L<GStreamer::Object>
+
+
+=cut
+
+
+=head1 COPYRIGHT
+
+Copyright (C) 2005-2014 by the gtk2-perl team.
+
+This software is licensed under the LGPL.  See L<GStreamer> for a full notice.
+
+
+
+=cut
+

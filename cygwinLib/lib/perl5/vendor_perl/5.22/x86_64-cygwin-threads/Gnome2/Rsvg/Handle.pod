@@ -1,0 +1,225 @@
+=head1 NAME
+
+Gnome2::Rsvg::Handle
+
+=cut
+
+
+=head1 METHODS
+
+=head2 handle = Gnome2::Rsvg::Handle-E<gt>B<new> 
+
+=head2 handle = Gnome2::Rsvg::Handle-E<gt>B<new_from_data> ($data)
+
+=over
+
+=item * $data (scalar) 
+
+=back
+
+
+
+May croak with a L<Glib::Error> in $@ on failure.
+
+Since: librsvg 2.14
+
+=head2 handle = Gnome2::Rsvg::Handle-E<gt>B<new_from_file> ($file_name)
+
+=over
+
+=item * $file_name (string) 
+
+=back
+
+
+
+May croak with a L<Glib::Error> in $@ on failure.
+
+Since: librsvg 2.14
+
+=head2 string or undef = $handle-E<gt>B<get_base_uri> 
+
+Since: librsvg 2.10
+
+=head2 $handle-E<gt>B<set_base_uri> ($base_uri)
+
+=over
+
+=item * $base_uri (string) 
+
+=back
+
+Since: librsvg 2.10
+
+=head2 boolean = $handle-E<gt>B<close> 
+
+
+
+May croak with a L<Glib::Error> in $@ on failure.
+
+=head2 string = $handle-E<gt>B<get_desc> 
+
+Since: librsvg 2.4
+
+=head2 scalar = $handle-E<gt>B<get_dimensions> 
+
+Since: librsvg 2.14
+
+=head2 scalar = $handle-E<gt>B<get_dimensions_sub> ($id)
+
+=over
+
+=item * $id (string or undef) 
+
+=back
+
+Since: librsvg 2.22
+
+=head2 $handle-E<gt>B<set_dpi> ($dpi)
+
+=over
+
+=item * $dpi (double) 
+
+=back
+
+=head2 $handle-E<gt>B<set_dpi_x_y> ($dpi_x, $dpi_y)
+
+=over
+
+=item * $dpi_x (double) 
+
+=item * $dpi_y (double) 
+
+=back
+
+=head2 boolean = $handle-E<gt>B<has_sub> ($id)
+
+=over
+
+=item * $id (string) 
+
+=back
+
+Since: librsvg 2.22
+
+=head2 string or undef = $handle-E<gt>B<get_metadata> 
+
+Since: librsvg 2.10
+
+=head2 pixbuf = $handle-E<gt>B<get_pixbuf> 
+
+=head2 pixbuf = $handle-E<gt>B<get_pixbuf_sub> ($id)
+
+=over
+
+=item * $id (string or undef) 
+
+=back
+
+Since: librsvg 2.14
+
+=head2 scalar = $handle-E<gt>B<get_position_sub> ($id)
+
+=over
+
+=item * $id (string or undef) 
+
+=back
+
+Since: librsvg 2.22
+
+=head2 boolean = $handle-E<gt>B<render_cairo> ($cr)
+
+=over
+
+=item * $cr (Cairo::Context) 
+
+=back
+
+Since: librsvg 2.22
+
+=head2 $handle-E<gt>B<render_cairo> ($cr)
+
+=over
+
+=item * $cr (Cairo::Context) 
+
+=back
+
+Since: librsvg 2.14
+
+=head2 boolean = $handle-E<gt>B<render_cairo_sub> ($cr, $id)
+
+=over
+
+=item * $cr (Cairo::Context) 
+
+=item * $id (string or undef) 
+
+=back
+
+Since: librsvg 2.22
+
+=head2 $handle-E<gt>B<render_cairo_sub> ($cr, $id)
+
+=over
+
+=item * $cr (Cairo::Context) 
+
+=item * $id (string or undef) 
+
+=back
+
+Since: librsvg 2.14
+
+=head2 $handle-E<gt>B<set_size_callback> ($size_func, $user_data=undef)
+
+=over
+
+=item * $size_func (scalar) 
+
+=item * $user_data (scalar) 
+
+=back
+
+=head2 string = $handle-E<gt>B<get_title> 
+
+Since: librsvg 2.4
+
+=head2 boolean = $handle-E<gt>B<write> ($data)
+
+=over
+
+=item * $data (scalar) 
+
+=back
+
+
+
+May croak with a L<Glib::Error> in $@ on failure.
+
+
+
+=cut
+
+
+=head1 SEE ALSO
+
+L<Gnome2::Rsvg>
+
+
+=cut
+
+
+=head1 COPYRIGHT
+
+Copyright (C) 2003-2005, 2010  Torsten Schoenfeld
+
+This software is licensed under the LGPL.  See L<Gnome2::Rsvg> for a full
+notice.
+
+
+
+=cut
+

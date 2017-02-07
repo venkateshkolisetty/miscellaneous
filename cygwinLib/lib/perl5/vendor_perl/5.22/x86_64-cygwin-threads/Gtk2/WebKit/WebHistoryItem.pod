@@ -1,0 +1,99 @@
+=head1 NAME
+
+Gtk2::WebKit::WebHistoryItem
+
+=cut
+
+=head1 HIERARCHY
+
+  Glib::Object
+  +----Gtk2::WebKit::WebHistoryItem
+
+
+
+=cut
+
+
+=head1 METHODS
+
+=head2 webhistoryitem = Gtk2::WebKit::WebHistoryItem-E<gt>B<new> 
+
+=head2 webhistoryitem = Gtk2::WebKit::WebHistoryItem-E<gt>B<new_with_data> ($uri, $title)
+
+=over
+
+=item * $uri (string) 
+
+=item * $title (string) 
+
+=back
+
+=head2 string = $web_history_item-E<gt>B<get_alternate_title> 
+
+=head2 $web_history_item-E<gt>B<set_alternate_title> ($title)
+
+=over
+
+=item * $title (string) 
+
+=back
+
+=head2 double = $web_history_item-E<gt>B<get_last_visited_time> 
+
+=head2 string = $web_history_item-E<gt>B<get_original_uri> 
+
+=head2 string = $web_history_item-E<gt>B<get_title> 
+
+=head2 string = $web_history_item-E<gt>B<get_uri> 
+
+
+
+=cut
+
+
+=head1 PROPERTIES
+
+=over
+
+=item 'alternate-title' (string : default undef : readable / writable / private)
+
+The alternate title of the history item
+
+=item 'last-visited-time' (double : default 0 : readable / private)
+
+The time at which the history item was last visited
+
+=item 'original-uri' (string : default undef : readable / private)
+
+The original URI of the history item
+
+=item 'title' (string : default undef : readable / private)
+
+The title of the history item
+
+=item 'uri' (string : default undef : readable / private)
+
+The URI of the history item
+
+=back
+
+
+
+=cut
+
+
+=head1 SEE ALSO
+
+L<Gtk2::WebKit>, L<Glib::Object>
+
+
+=cut
+
+
+=head1 COPYRIGHT
+
+Copyright (C) 2008, Florian Ragwitz
+
+
+=cut
+

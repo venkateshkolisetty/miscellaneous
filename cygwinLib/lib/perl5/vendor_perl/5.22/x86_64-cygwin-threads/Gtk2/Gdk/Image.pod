@@ -1,0 +1,165 @@
+=head1 NAME
+
+Gtk2::Gdk::Image
+
+=cut
+
+=for position DESCRIPTION
+
+=head1 DESCRIPTION
+
+A C<Gtk2::Gdk::Image> is a 2-D array of pixel values in client-side
+memory.  It can optionally use shared memory with the X server for
+fast copying to or from a window or pixmap.
+
+If you're thinking of using this then look at C<Gtk2::Gdk::Pixbuf>
+first.  GdkPixbuf has many more features, in particular file read and
+write (PNG, JPEG, etc).  But a GdkImage lets you work directly in
+pixel values instead of expanding to RGB components.
+
+See L<Gtk2::Gdk::Drawable> for C<draw_image>, C<get_image> and
+C<copy_to_image> methods to draw or fetch images to or from a window
+or pixmap.
+
+The various C<get> methods are Gtk 2.22 style.  For previous versions
+they're direct field access.
+
+=cut
+
+
+
+=head1 HIERARCHY
+
+  Glib::Object
+  +----Gtk2::Gdk::Image
+
+
+
+=cut
+
+
+=head1 METHODS
+
+=head2 image or undef = Gtk2::Gdk::Image-E<gt>B<new> ($type, $visual, $width, $height)
+
+=over
+
+=item * $type (Gtk2::Gdk::ImageType) 
+
+=item * $visual (Gtk2::Gdk::Visual) 
+
+=item * $width (integer) 
+
+=item * $height (integer) 
+
+=back
+
+=head2 integer = $image-E<gt>B<get_bits_per_pixel> 
+
+=head2 byteorder = $image-E<gt>B<get_byte_order> 
+
+=head2 integer = $image-E<gt>B<get_bytes_per_line> 
+
+=head2 integer = $image-E<gt>B<get_bytes_per_pixel> 
+
+=head2 colormap = $image-E<gt>B<get_colormap> 
+
+=head2 $image-E<gt>B<set_colormap> ($colormap)
+
+=over
+
+=item * $colormap (Gtk2::Gdk::Colormap) 
+
+=back
+
+=head2 integer = $image-E<gt>B<get_depth> 
+
+=head2 integer = $image-E<gt>B<get_height> 
+
+=head2 imagetype = $image-E<gt>B<get_image_type> 
+
+=head2 unsigned = $image-E<gt>B<get_pixel> ($x, $y)
+
+=over
+
+=item * $x (integer) 
+
+=item * $y (integer) 
+
+=back
+
+=head2 string = $image->B<get_pixels>()
+
+Return a copy of the raw pixel data memory from C<$image>.  This is
+C<bytes_per_line * height> many bytes.
+
+=head2 $image-E<gt>B<put_pixel> ($x, $y, $pixel)
+
+=over
+
+=item * $x (integer) 
+
+=item * $y (integer) 
+
+=item * $pixel (unsigned) 
+
+=back
+
+=head2 visual = $image-E<gt>B<get_visual> 
+
+=head2 integer = $image-E<gt>B<get_width> 
+
+
+
+=cut
+
+
+=head1 ENUMS AND FLAGS
+
+=head2 enum Gtk2::Gdk::ByteOrder
+
+=over
+
+=item * 'lsb-first' / 'GDK_LSB_FIRST'
+
+=item * 'msb-first' / 'GDK_MSB_FIRST'
+
+=back
+
+
+=head2 enum Gtk2::Gdk::ImageType
+
+=over
+
+=item * 'normal' / 'GDK_IMAGE_NORMAL'
+
+=item * 'shared' / 'GDK_IMAGE_SHARED'
+
+=item * 'fastest' / 'GDK_IMAGE_FASTEST'
+
+=back
+
+
+
+
+=cut
+
+
+=head1 SEE ALSO
+
+L<Gtk2>, L<Glib::Object>
+
+
+=cut
+
+
+=head1 COPYRIGHT
+
+Copyright (C) 2003-2011 by the gtk2-perl team.
+
+This software is licensed under the LGPL.  See L<Gtk2> for a full notice.
+
+
+
+=cut
+

@@ -1,0 +1,121 @@
+=head1 NAME
+
+GStreamer::ElementFactory
+
+=cut
+
+=head1 HIERARCHY
+
+  Glib::Object
+  +----GStreamer::Object
+       +----GStreamer::PluginFeature
+            +----GStreamer::ElementFactory
+
+
+
+=cut
+
+
+=head1 METHODS
+
+=head2 string = $factory-E<gt>B<get_author> 
+
+=head2 boolean = $factory-E<gt>B<can_sink_caps> ($caps)
+
+=over
+
+=item * $caps (GStreamer::Caps) 
+
+=back
+
+=head2 boolean = $factory-E<gt>B<can_src_caps> ($caps)
+
+=over
+
+=item * $caps (GStreamer::Caps) 
+
+=back
+
+=head2 element or undef = $factory-E<gt>B<create> ($name)
+
+=over
+
+=item * $name (string or undef) 
+
+=back
+
+=head2 string = $factory-E<gt>B<get_description> 
+
+=head2 string = $factory-E<gt>B<get_element_type> 
+
+=head2 elementfactory or undef = GStreamer::ElementFactory-E<gt>B<find> ($name)
+
+=over
+
+=item * $name (string) 
+
+=back
+
+=head2 string = $factory-E<gt>B<get_klass> 
+
+=head2 string = $factory-E<gt>B<get_longname> 
+
+=head2 list = GStreamer::ElementFactory-E<gt>B<make> ($factoryname, $name, ...)
+
+=over
+
+=item * $factoryname (string) 
+
+=item * $name (string) 
+
+=item * ... (list) 
+
+=back
+
+=head2 list = $factory-E<gt>B<get_uri_protocols> 
+
+=head2 uritype = $factory-E<gt>B<get_uri_type> 
+
+
+
+=cut
+
+
+=head1 ENUMS AND FLAGS
+
+=head2 enum GStreamer::URIType
+
+=over
+
+=item * 'unknown' / 'GST_URI_UNKNOWN'
+
+=item * 'sink' / 'GST_URI_SINK'
+
+=item * 'src' / 'GST_URI_SRC'
+
+=back
+
+
+
+
+=cut
+
+
+=head1 SEE ALSO
+
+L<GStreamer>, L<Glib::Object>, L<GStreamer::Object>, L<GStreamer::PluginFeature>
+
+
+=cut
+
+
+=head1 COPYRIGHT
+
+Copyright (C) 2005-2014 by the gtk2-perl team.
+
+This software is licensed under the LGPL.  See L<GStreamer> for a full notice.
+
+
+
+=cut
+

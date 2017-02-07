@@ -1,0 +1,145 @@
+=head1 NAME
+
+GStreamer::Clock
+
+=cut
+
+=head1 HIERARCHY
+
+  Glib::Object
+  +----GStreamer::Object
+       +----GStreamer::Clock
+
+
+
+=cut
+
+
+=head1 METHODS
+
+=head2 clockid = $clock-E<gt>B<new_periodic_id> ($start_time, $interval)
+
+=over
+
+=item * $start_time (unsigned integer) 
+
+=item * $interval (unsigned integer) 
+
+=back
+
+=head2 clockid = $clock-E<gt>B<new_single_shot_id> ($time)
+
+=over
+
+=item * $time (unsigned integer) 
+
+=back
+
+=head2 list = $clock-E<gt>B<add_observation> ($slave, $master)
+
+=over
+
+=item * $slave (unsigned integer) 
+
+=item * $master (unsigned integer) 
+
+=back
+
+=head2 unsigned integer = $clock-E<gt>B<adjust_unlocked> ($internal)
+
+=over
+
+=item * $internal (unsigned integer) 
+
+=back
+
+=head2 (internal, external, rate_num, rate_denom) = $clock-E<gt>B<get_calibration> 
+
+=head2 $clock-E<gt>B<set_calibration> ($internal, $external, $rate_num, $rate_denom)
+
+=over
+
+=item * $internal (unsigned integer) 
+
+=item * $external (unsigned integer) 
+
+=item * $rate_num (unsigned integer) 
+
+=item * $rate_denom (unsigned integer) 
+
+=back
+
+=head2 unsigned integer = $clock-E<gt>B<get_internal_time> 
+
+=head2 clock or undef = $clock-E<gt>B<get_master> 
+
+=head2 boolean = $clock-E<gt>B<set_master> ($master)
+
+=over
+
+=item * $master (GStreamer::Clock) 
+
+=back
+
+=head2 64 bit unsigned = $clock-E<gt>B<get_resolution> 
+
+=head2 64 bit unsigned = $clock-E<gt>B<set_resolution> ($resolution)
+
+=over
+
+=item * $resolution (64 bit unsigned) 
+
+=back
+
+=head2 unsigned integer = $clock-E<gt>B<get_time> 
+
+
+
+=cut
+
+
+=head1 PROPERTIES
+
+=over
+
+=item 'stats' (boolean : default false : readable / writable / private)
+
+Enable clock stats (unimplemented)
+
+=item 'timeout' (Glib::UInt64 : default 100000000 : readable / writable / private)
+
+The amount of time, in nanoseconds, to sample master and slave clocks
+
+=item 'window-size' (integer : default 32 : readable / writable / private)
+
+The size of the window used to calculate rate and offset
+
+=item 'window-threshold' (integer : default 4 : readable / writable / private)
+
+The threshold to start calculating rate and offset
+
+=back
+
+
+
+=cut
+
+
+=head1 SEE ALSO
+
+L<GStreamer>, L<Glib::Object>, L<GStreamer::Object>
+
+
+=cut
+
+
+=head1 COPYRIGHT
+
+Copyright (C) 2005-2014 by the gtk2-perl team.
+
+This software is licensed under the LGPL.  See L<GStreamer> for a full notice.
+
+
+
+=cut
+

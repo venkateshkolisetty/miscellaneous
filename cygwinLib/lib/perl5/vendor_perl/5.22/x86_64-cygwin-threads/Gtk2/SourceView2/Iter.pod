@@ -1,0 +1,82 @@
+=head1 NAME
+
+Gtk2::SourceView2::Iter
+
+=cut
+
+=for apidoc
+=for signature (match_start, match_end) = Gtk2::SourceView2::Iter->forward_search ($iter, $str, $flags, $limit=NULL)
+gtk_source_iter_forward_search (class, const GtkTextIter *iter, const gchar *str, GtkSourceSearchFlags flags, const GtkTextIter *limit = NULL)
+=cut
+
+
+
+
+=head1 METHODS
+
+=head2 (match_start, match_end) = Gtk2::SourceView2::Iter->B<backward_search> ($iter, $str, $flags, $limit=NULL)
+
+=over
+
+=item * $iter (Gtk2::TextIter) 
+
+=item * $str (string) 
+
+=item * $flags (Gtk2::SourceView2::SearchFlags) 
+
+=back
+
+
+
+=head2 Gtk2::SourceView2::Iter-E<gt>B<forward_search> ($iter, $str, $flags)
+
+=over
+
+=item * $iter (Gtk2::TextIter) 
+
+=item * $str (string) 
+
+=item * $flags (Gtk2::SourceView2::SearchFlags) 
+
+=back
+
+
+
+=cut
+
+
+=head1 ENUMS AND FLAGS
+
+=head2 flags Gtk2::SourceView2::SearchFlags
+
+=over
+
+=item * 'visible-only' / 'GTK_SOURCE_SEARCH_VISIBLE_ONLY'
+
+=item * 'text-only' / 'GTK_SOURCE_SEARCH_TEXT_ONLY'
+
+=item * 'case-insensitive' / 'GTK_SOURCE_SEARCH_CASE_INSENSITIVE'
+
+=back
+
+
+
+
+=cut
+
+
+=head1 SEE ALSO
+
+L<Gtk2::SourceView2>
+
+
+=cut
+
+
+=head1 COPYRIGHT
+
+Copyright (C) 2009 by Emmanuel Rodriguez
+
+
+=cut
+

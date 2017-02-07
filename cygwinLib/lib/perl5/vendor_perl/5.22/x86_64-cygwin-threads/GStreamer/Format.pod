@@ -1,0 +1,99 @@
+=head1 NAME
+
+GStreamer::Format
+
+=cut
+
+=head1 HIERARCHY
+
+  Glib::Enum
+  +----GStreamer::Format
+
+
+
+=cut
+
+
+=head1 METHODS
+
+=head2 format = GStreamer::Format::get_by_nick ($nick)
+
+=over
+
+=item * $nick (string) 
+
+=back
+
+
+
+=head2 list = GStreamer::Format::get_details ($format)
+
+=over
+
+=item * $format (GStreamer::Format) 
+
+=back
+
+
+
+=head2 format = GStreamer::Format::register ($nick, $description)
+
+=over
+
+=item * $nick (string) 
+
+=item * $description (string) 
+
+=back
+
+
+
+
+
+=cut
+
+
+=head1 ENUMS AND FLAGS
+
+=head2 enum GStreamer::Format
+
+=over
+
+=item * 'undefined' / 'GST_FORMAT_UNDEFINED'
+
+=item * 'default' / 'GST_FORMAT_DEFAULT'
+
+=item * 'bytes' / 'GST_FORMAT_BYTES'
+
+=item * 'time' / 'GST_FORMAT_TIME'
+
+=item * 'buffers' / 'GST_FORMAT_BUFFERS'
+
+=item * 'percent' / 'GST_FORMAT_PERCENT'
+
+=back
+
+
+
+
+=cut
+
+
+=head1 SEE ALSO
+
+L<GStreamer>, L<Glib::Enum>
+
+
+=cut
+
+
+=head1 COPYRIGHT
+
+Copyright (C) 2005-2014 by the gtk2-perl team.
+
+This software is licensed under the LGPL.  See L<GStreamer> for a full notice.
+
+
+
+=cut
+

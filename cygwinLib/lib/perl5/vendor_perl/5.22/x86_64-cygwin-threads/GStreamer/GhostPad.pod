@@ -1,0 +1,94 @@
+=head1 NAME
+
+GStreamer::GhostPad
+
+=cut
+
+=head1 HIERARCHY
+
+  Glib::Object
+  +----GStreamer::Object
+       +----GStreamer::Pad
+            +----GStreamer::Pad
+                 +----GStreamer::GhostPad
+
+
+
+=cut
+
+
+=head1 METHODS
+
+=head2 pad or undef = GStreamer::GhostPad-E<gt>B<new> ($name, $target)
+
+=over
+
+=item * $name (string or undef) 
+
+=item * $target (GStreamer::Pad) 
+
+=back
+
+=head2 pad or undef = GStreamer::GhostPad-E<gt>B<new_no_target> ($name, $dir)
+
+=over
+
+=item * $name (string or undef) 
+
+=item * $dir (GStreamer::PadDirection) 
+
+=back
+
+=head2 pad or undef = $gpad-E<gt>B<get_target> 
+
+=head2 boolean = $gpad-E<gt>B<set_target> ($newtarget)
+
+=over
+
+=item * $newtarget (GStreamer::Pad) 
+
+=back
+
+
+
+=cut
+
+
+=head1 ENUMS AND FLAGS
+
+=head2 enum GStreamer::PadDirection
+
+=over
+
+=item * 'unknown' / 'GST_PAD_UNKNOWN'
+
+=item * 'src' / 'GST_PAD_SRC'
+
+=item * 'sink' / 'GST_PAD_SINK'
+
+=back
+
+
+
+
+=cut
+
+
+=head1 SEE ALSO
+
+L<GStreamer>, L<Glib::Object>, L<GStreamer::Object>, L<GStreamer::Pad>, L<GStreamer::Pad>
+
+
+=cut
+
+
+=head1 COPYRIGHT
+
+Copyright (C) 2005-2014 by the gtk2-perl team.
+
+This software is licensed under the LGPL.  See L<GStreamer> for a full notice.
+
+
+
+=cut
+

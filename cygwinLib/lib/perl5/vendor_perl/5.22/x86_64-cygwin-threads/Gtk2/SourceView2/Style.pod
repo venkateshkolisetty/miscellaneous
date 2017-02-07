@@ -1,0 +1,107 @@
+=head1 NAME
+
+Gtk2::SourceView2::Style
+
+=cut
+
+=head1 HIERARCHY
+
+  Glib::Object
+  +----Gtk2::SourceView2::Style
+
+
+
+=cut
+
+
+=head1 METHODS
+
+=head2 style = $style-E<gt>B<copy> 
+
+
+
+=cut
+
+
+=head1 PROPERTIES
+
+=over
+
+=item 'background' (string : default undef : readable / writable / construct-only)
+
+Background color
+
+=item 'background-set' (boolean : default false : readable / writable / construct-only)
+
+Whether background color is set
+
+=item 'bold' (boolean : default false : readable / writable / construct-only)
+
+Bold
+
+=item 'bold-set' (boolean : default false : readable / writable / construct-only)
+
+Whether bold attribute is set
+
+=item 'foreground' (string : default undef : readable / writable / construct-only)
+
+Foreground color
+
+=item 'foreground-set' (boolean : default false : readable / writable / construct-only)
+
+Whether foreground color is set
+
+=item 'italic' (boolean : default false : readable / writable / construct-only)
+
+Italic
+
+=item 'italic-set' (boolean : default false : readable / writable / construct-only)
+
+Whether italic attribute is set
+
+=item 'line-background' (string : default undef : readable / writable / construct-only)
+
+Line background color
+
+=item 'line-background-set' (boolean : default false : readable / writable / construct-only)
+
+Whether line background color is set
+
+=item 'strikethrough' (boolean : default false : readable / writable / construct-only)
+
+Strikethrough
+
+=item 'strikethrough-set' (boolean : default false : readable / writable / construct-only)
+
+Whether strikethrough attribute is set
+
+=item 'underline' (boolean : default false : readable / writable / construct-only)
+
+Underline
+
+=item 'underline-set' (boolean : default false : readable / writable / construct-only)
+
+Whether underline attribute is set
+
+=back
+
+
+
+=cut
+
+
+=head1 SEE ALSO
+
+L<Gtk2::SourceView2>, L<Glib::Object>
+
+
+=cut
+
+
+=head1 COPYRIGHT
+
+Copyright (C) 2009 by Emmanuel Rodriguez
+
+
+=cut
+

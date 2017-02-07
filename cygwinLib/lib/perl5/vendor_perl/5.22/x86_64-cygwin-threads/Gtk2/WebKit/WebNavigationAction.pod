@@ -1,0 +1,119 @@
+=head1 NAME
+
+Gtk2::WebKit::WebNavigationAction
+
+=cut
+
+=head1 HIERARCHY
+
+  Glib::Object
+  +----Gtk2::WebKit::WebNavigationAction
+
+
+
+=cut
+
+
+=head1 METHODS
+
+=head2 integer = $navigation_action-E<gt>B<get_button> 
+
+=head2 integer = $navigation_action-E<gt>B<get_modifier_state> 
+
+=head2 string = $navigation_action-E<gt>B<get_original_uri> 
+
+=head2 $navigation_action-E<gt>B<set_original_uri> ($original_uri)
+
+=over
+
+=item * $original_uri (string) 
+
+=back
+
+=head2 webnavigationreason = $navigation_action-E<gt>B<get_reason> 
+
+=head2 $navigation_action-E<gt>B<set_reason> ($reason)
+
+=over
+
+=item * $reason (Gtk2::WebKit::WebNavigationReason) 
+
+=back
+
+
+
+=cut
+
+
+=head1 PROPERTIES
+
+=over
+
+=item 'button' (integer : default -1 : readable / writable / construct-only / private)
+
+The button used to click
+
+=item 'modifier-state' (integer : default 0 : readable / writable / construct-only / private)
+
+A bitmask representing the state of the modifier keys
+
+=item 'original-uri' (string : default "" : readable / writable / construct / private)
+
+The URI that was requested as the target for the navigation
+
+=item 'reason' (Gtk2::WebKit::WebNavigationReason : default "other" : readable / writable / construct / private)
+
+The reason why this navigation is occurring
+
+=item 'target-frame' (string : default undef : readable / writable / construct-only / private)
+
+The target frame for the navigation
+
+=back
+
+
+
+=cut
+
+
+=head1 ENUMS AND FLAGS
+
+=head2 enum Gtk2::WebKit::WebNavigationReason
+
+=over
+
+=item * 'link-clicked' / 'WEBKIT_WEB_NAVIGATION_REASON_LINK_CLICKED'
+
+=item * 'form-submitted' / 'WEBKIT_WEB_NAVIGATION_REASON_FORM_SUBMITTED'
+
+=item * 'back-forward' / 'WEBKIT_WEB_NAVIGATION_REASON_BACK_FORWARD'
+
+=item * 'reload' / 'WEBKIT_WEB_NAVIGATION_REASON_RELOAD'
+
+=item * 'form-resubmitted' / 'WEBKIT_WEB_NAVIGATION_REASON_FORM_RESUBMITTED'
+
+=item * 'other' / 'WEBKIT_WEB_NAVIGATION_REASON_OTHER'
+
+=back
+
+
+
+
+=cut
+
+
+=head1 SEE ALSO
+
+L<Gtk2::WebKit>, L<Glib::Object>
+
+
+=cut
+
+
+=head1 COPYRIGHT
+
+Copyright (C) 2008, Florian Ragwitz
+
+
+=cut
+

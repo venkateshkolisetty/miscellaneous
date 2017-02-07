@@ -1,0 +1,105 @@
+=head1 NAME
+
+Gtk2::SourceView2::StyleSchemeManager
+
+=cut
+
+=head1 HIERARCHY
+
+  Glib::Object
+  +----Gtk2::SourceView2::StyleSchemeManager
+
+
+
+=cut
+
+
+=head1 METHODS
+
+=head2 styleschememanager = Gtk2::SourceView2::StyleSchemeManager-E<gt>B<new> 
+
+=head2 $manager-E<gt>B<append_search_path> ($path)
+
+=over
+
+=item * $path (string) 
+
+=back
+
+=head2 styleschememanager = Gtk2::SourceView2::StyleSchemeManager-E<gt>B<get_default> 
+
+=head2 $manager-E<gt>B<force_rescan> 
+
+=head2 $manager-E<gt>B<prepend_search_path> ($path)
+
+=over
+
+=item * $path (string) 
+
+=back
+
+=head2 stylescheme = $manager-E<gt>B<get_scheme> ($scheme_id)
+
+=over
+
+=item * $scheme_id (string) 
+
+=back
+
+=head2 list = $manager-E<gt>B<get_scheme_ids> 
+
+=head2 list = $manager-E<gt>B<get_search_path> 
+
+=head2 $manager-E<gt>B<set_search_path> (...)
+
+=over
+
+=item * ... (list) 
+
+=back
+
+
+Sets the list of directories where the manager looks for style scheme files. If
+no dirs are given (empty list) then the search path is cleared, if C<undef> is
+passed then the search path is reset to default.
+
+
+
+
+=cut
+
+
+=head1 PROPERTIES
+
+=over
+
+=item 'scheme-ids' (Glib::Strv : default undef : readable)
+
+List of the ids of the available style schemes
+
+=item 'search-path' (Glib::Strv : default undef : readable / writable)
+
+List of directories and files where the style schemes are located
+
+=back
+
+
+
+=cut
+
+
+=head1 SEE ALSO
+
+L<Gtk2::SourceView2>, L<Glib::Object>
+
+
+=cut
+
+
+=head1 COPYRIGHT
+
+Copyright (C) 2009 by Emmanuel Rodriguez
+
+
+=cut
+

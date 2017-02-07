@@ -1,0 +1,186 @@
+=head1 NAME
+
+Gtk2::Editable
+
+=cut
+
+=head1 HIERARCHY
+
+  Glib::Interface
+  +----Gtk2::Editable
+
+
+
+=cut
+
+
+=head1 METHODS
+
+=head2 string = $editable-E<gt>B<get_chars> ($start_pos, $end_pos)
+
+=over
+
+=item * $start_pos (integer) 
+
+=item * $end_pos (integer) 
+
+=back
+
+=head2 $editable-E<gt>B<copy_clipboard> 
+
+=head2 $editable-E<gt>B<cut_clipboard> 
+
+=head2 $editable-E<gt>B<delete_selection> 
+
+=head2 $editable-E<gt>B<delete_text> ($start_pos, $end_pos)
+
+=over
+
+=item * $start_pos (integer) 
+
+=item * $end_pos (integer) 
+
+=back
+
+=head2 boolean = $editable-E<gt>B<get_editable> 
+
+=head2 $editable-E<gt>B<set_editable> ($is_editable)
+
+=over
+
+=item * $is_editable (boolean) 
+
+=back
+
+=head2 new_position = $editable->B<insert_text> (new_text, position)
+
+=over
+
+=item * $new_text (string) 
+
+=item * ... (list) 
+
+=back
+
+
+
+=head2 $editable-E<gt>B<paste_clipboard> 
+
+=head2 integer = $editable-E<gt>B<get_position> 
+
+=head2 $editable-E<gt>B<set_position> ($position)
+
+=over
+
+=item * $position (integer) 
+
+=back
+
+=head2 $editable-E<gt>B<select_region> ($start, $end)
+
+=over
+
+=item * $start (integer) 
+
+=item * $end (integer) 
+
+=back
+
+=head2 (start, end) = $editable->B<get_selection_bounds>
+
+Returns integers, start and end.
+
+
+
+=cut
+
+
+=head1 SIGNALS
+
+=over
+
+=item B<changed> (Gtk2::Editable)
+
+=item B<insert-text> (Gtk2::Editable, string, integer, gpointer)
+
+=item B<delete-text> (Gtk2::Editable, integer, integer)
+
+=back
+
+
+
+=cut
+
+=for position post_signals
+
+The C<insert-text> signal handler can optionally alter the text to be
+inserted.  It may
+
+=over 4
+
+=item
+
+Return no values for no change.  Be sure to end with an empty
+C<return>.
+
+    sub my_insert_text_handler {
+      my ($widget, $text, $len, $pos, $userdata) = @_;
+      print "inserting '$text' at char position '$pos'\n";
+      return;  # no values
+    }
+
+=item
+
+Return two values C<($text, $pos)> which are the new text and
+character position.
+
+    sub my_insert_text_handler {
+      my ($widget, $text, $len, $pos, $userdata) = @_;
+      return (uc($text), $pos);  # force to upper case
+    }
+
+=item
+
+Return no values and modify the text in C<$_[1]> and/or position in
+C<$_[3]>.  For example,
+
+    sub my_insert_text_handler {
+      $_[1] = uc($_[1]);   # force to upper case
+      $_[3] = 0;           # force position to the start
+      return;  # no values
+    }
+
+=back
+
+Note that currently in a Perl subclass of a C<Gtk2::Editable> widget,
+a class closure (ie. class default signal handler) for C<insert-text>
+does not work this way.  It instead sees the C level C<($text, $len,
+$pos_pointer)>, where C<$pos_pointer> is a machine address and cannot
+be used easily.  Hopefully this will change in the future.
+A C<signal_chain_from_overridden> with the args as passed works, but
+for anything else the suggestion is to use a C<signal_connect>
+instead.
+
+=cut
+
+
+
+
+=head1 SEE ALSO
+
+L<Gtk2>, L<Glib::Interface>
+
+
+=cut
+
+
+=head1 COPYRIGHT
+
+Copyright (C) 2003-2011 by the gtk2-perl team.
+
+This software is licensed under the LGPL.  See L<Gtk2> for a full notice.
+
+
+
+=cut
+

@@ -1,0 +1,117 @@
+=head1 NAME
+
+GStreamer::Object
+
+=cut
+
+=head1 HIERARCHY
+
+  Glib::Object
+  +----GStreamer::Object
+
+
+
+=cut
+
+
+=head1 METHODS
+
+=head2 boolean = $object-E<gt>B<has_ancestor> ($ancestor)
+
+=over
+
+=item * $ancestor (GStreamer::Object) 
+
+=back
+
+=head2 string or undef = $object-E<gt>B<get_name> 
+
+=head2 string or undef = $object-E<gt>B<get_name_prefix> 
+
+=head2 $object-E<gt>B<set_name_prefix> ($name_prefix)
+
+=over
+
+=item * $name_prefix (string or undef) 
+
+=back
+
+=head2 $object-E<gt>B<set_name> ($name)
+
+=over
+
+=item * $name (string or undef) 
+
+=back
+
+=head2 object or undef = $object-E<gt>B<get_parent> 
+
+=head2 $object-E<gt>B<set_parent> ($parent)
+
+=over
+
+=item * $parent (GStreamer::Object) 
+
+=back
+
+=head2 string = $object-E<gt>B<get_path_string> 
+
+=head2 $object-E<gt>B<unparent> 
+
+
+
+=cut
+
+
+=head1 PROPERTIES
+
+=over
+
+=item 'name' (string : default undef : readable / writable / construct / private)
+
+The name of the object
+
+=back
+
+
+
+=cut
+
+
+=head1 SIGNALS
+
+=over
+
+=item B<parent-set> (GStreamer::Object, GStreamer::Object)
+
+=item B<parent-unset> (GStreamer::Object, GStreamer::Object)
+
+=item B<object-saved> (GStreamer::Object, gpointer)
+
+=item B<deep-notify> (GStreamer::Object, GStreamer::Object, Glib::ParamSpec)
+
+=back
+
+
+
+=cut
+
+
+=head1 SEE ALSO
+
+L<GStreamer>, L<Glib::Object>
+
+
+=cut
+
+
+=head1 COPYRIGHT
+
+Copyright (C) 2005-2014 by the gtk2-perl team.
+
+This software is licensed under the LGPL.  See L<GStreamer> for a full notice.
+
+
+
+=cut
+

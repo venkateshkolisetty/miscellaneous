@@ -1,0 +1,383 @@
+=head1 NAME
+
+GStreamer::Pad
+
+=cut
+
+=head1 HIERARCHY
+
+  Glib::Object
+  +----GStreamer::Object
+       +----GStreamer::Pad
+
+
+
+=cut
+
+
+=head1 METHODS
+
+=head2 pad or undef = GStreamer::Pad-E<gt>B<new> ($name, $direction)
+
+=over
+
+=item * $name (string) 
+
+=item * $direction (GStreamer::PadDirection) 
+
+=back
+
+=head2 pad or undef = GStreamer::Pad-E<gt>B<new_from_template> ($templ, $name)
+
+=over
+
+=item * $templ (GStreamer::PadTemplate) 
+
+=item * $name (string) 
+
+=back
+
+=head2 boolean = $pad-E<gt>B<accept_caps> ($caps)
+
+=over
+
+=item * $caps (GStreamer::Caps) 
+
+=back
+
+=head2 boolean = $pad-E<gt>B<activate_pull> ($active)
+
+=over
+
+=item * $active (boolean) 
+
+=back
+
+=head2 boolean = $pad-E<gt>B<activate_push> ($active)
+
+=over
+
+=item * $active (boolean) 
+
+=back
+
+=head2 $pad-E<gt>B<set_active> ($active)
+
+=over
+
+=item * $active (boolean) 
+
+=back
+
+=head2 caps or undef = $srcpad-E<gt>B<get_allowed_caps> 
+
+=head2 boolean = $pad-E<gt>B<set_blocked> ($blocked)
+
+=over
+
+=item * $blocked (boolean) 
+
+=back
+
+=head2 caps = $pad-E<gt>B<get_caps> 
+
+=head2 boolean = $pad-E<gt>B<set_caps> ($caps)
+
+=over
+
+=item * $caps (GStreamer::Caps or undef) 
+
+=back
+
+=head2 flowreturn = $pad-E<gt>B<chain> ($buffer)
+
+=over
+
+=item * $buffer (GstBuffer) 
+
+=back
+
+=head2 boolean = $pad-E<gt>B<check_pull_range> 
+
+=head2 paddirection = $pad-E<gt>B<get_direction> 
+
+=head2 boolean = $pad-E<gt>B<event_default> ($event)
+
+=over
+
+=item * $event (GstEvent) 
+
+=back
+
+=head2 $pad-E<gt>B<fixate_caps> ($caps)
+
+=over
+
+=item * $caps (GStreamer::Caps) 
+
+=back
+
+=head2 list = $pad-E<gt>B<get_internal_links_default> 
+
+=head2 list = $pad-E<gt>B<get_internal_links> 
+
+=head2 boolean = $pad-E<gt>B<is_active> 
+
+=head2 boolean = $pad-E<gt>B<is_blocked> 
+
+=head2 boolean = $pad-E<gt>B<is_blocking> 
+
+Since: gst 0.10
+
+=head2 boolean = $pad-E<gt>B<is_linked> 
+
+=head2 iterator = $pad-E<gt>B<iterate_internal_links> 
+
+Since: gst 0.10
+
+=head2 iterator = $pad-E<gt>B<iterate_internal_links_default> 
+
+Since: gst 0.10
+
+=head2 boolean = $srcpad-E<gt>B<link> ($sinkpad)
+
+=over
+
+=item * $sinkpad (GStreamer::Pad) 
+
+=back
+
+=head2 caps or undef = $pad-E<gt>B<get_negotiated_caps> 
+
+=head2 caps = $pad-E<gt>B<get_pad_template_caps> 
+
+=head2 padtemplate = $pad-E<gt>B<get_pad_template> 
+
+=head2 boolean = $pad-E<gt>B<pause_task> 
+
+=head2 boolean = $pad-E<gt>B<peer_accept_caps> ($caps)
+
+=over
+
+=item * $caps (GStreamer::Caps) 
+
+=back
+
+=head2 pad = $pad-E<gt>B<get_peer> 
+
+=head2 caps = $pad-E<gt>B<peer_get_caps> 
+
+=head2 boolean = $pad-E<gt>B<peer_query> ($query)
+
+=over
+
+=item * $query (GstQuery) 
+
+=back
+
+Since: gst 0.10
+
+=head2 list = $pad-E<gt>B<pull_range> ($offset, $size)
+
+=over
+
+=item * $offset (64 bit unsigned) 
+
+=item * $size (integer) 
+
+=back
+
+=head2 flowreturn = $pad-E<gt>B<push> ($buffer)
+
+=over
+
+=item * $buffer (GstBuffer) 
+
+=back
+
+=head2 boolean = $pad-E<gt>B<push_event> ($event)
+
+=over
+
+=item * $event (GstEvent) 
+
+=back
+
+=head2 boolean = $pad-E<gt>B<query> ($query)
+
+=over
+
+=item * $query (GstQuery) 
+
+=back
+
+=head2 boolean = $pad-E<gt>B<query_default> ($query)
+
+=over
+
+=item * $query (GstQuery) 
+
+=back
+
+=head2 list = $pad-E<gt>B<get_query_types_default> 
+
+=head2 list = $pad-E<gt>B<get_query_types> 
+
+=head2 list = $pad-E<gt>B<get_range> ($offset, $size)
+
+=over
+
+=item * $offset (64 bit unsigned) 
+
+=item * $size (integer) 
+
+=back
+
+=head2 boolean = $pad-E<gt>B<send_event> ($event)
+
+=over
+
+=item * $event (GstEvent) 
+
+=back
+
+=head2 boolean = $pad-E<gt>B<start_task> ($func, $data=undef)
+
+=over
+
+=item * $func (scalar) 
+
+=item * $data (scalar) 
+
+=back
+
+=head2 boolean = $pad-E<gt>B<stop_task> 
+
+=head2 $srcpad-E<gt>B<unlink> ($sinkpad)
+
+=over
+
+=item * $sinkpad (GStreamer::Pad) 
+
+=back
+
+
+
+=cut
+
+
+=head1 PROPERTIES
+
+=over
+
+=item 'caps' (GStreamer::Caps : default undef : readable / private)
+
+The capabilities of the pad
+
+=item 'direction' (GStreamer::PadDirection : default "unknown" : readable / writable / construct-only / private)
+
+The direction of the pad
+
+=item 'template' (GStreamer::PadTemplate : default undef : readable / writable / private)
+
+The GstPadTemplate of this pad
+
+=back
+
+
+
+=cut
+
+
+=head1 SIGNALS
+
+=over
+
+=item B<linked> (GStreamer::Pad, GStreamer::Pad)
+
+=item B<unlinked> (GStreamer::Pad, GStreamer::Pad)
+
+=item B<request-link> (GStreamer::Pad)
+
+=item boolean = B<have-data> (GStreamer::Pad, GStreamer::MiniObject)
+
+=back
+
+
+
+=cut
+
+
+=head1 ENUMS AND FLAGS
+
+=head2 enum GStreamer::FlowReturn
+
+=over
+
+=item * 'custom-success-2' / 'GST_FLOW_CUSTOM_SUCCESS_2'
+
+=item * 'custom-success-1' / 'GST_FLOW_CUSTOM_SUCCESS_1'
+
+=item * 'custom-success' / 'GST_FLOW_CUSTOM_SUCCESS'
+
+=item * 'resend' / 'GST_FLOW_RESEND'
+
+=item * 'ok' / 'GST_FLOW_OK'
+
+=item * 'not-linked' / 'GST_FLOW_NOT_LINKED'
+
+=item * 'wrong-state' / 'GST_FLOW_WRONG_STATE'
+
+=item * 'unexpected' / 'GST_FLOW_UNEXPECTED'
+
+=item * 'not-negotiated' / 'GST_FLOW_NOT_NEGOTIATED'
+
+=item * 'error' / 'GST_FLOW_ERROR'
+
+=item * 'not-supported' / 'GST_FLOW_NOT_SUPPORTED'
+
+=item * 'custom-error' / 'GST_FLOW_CUSTOM_ERROR'
+
+=item * 'custom-error-1' / 'GST_FLOW_CUSTOM_ERROR_1'
+
+=item * 'custom-error-2' / 'GST_FLOW_CUSTOM_ERROR_2'
+
+=back
+
+
+=head2 enum GStreamer::PadDirection
+
+=over
+
+=item * 'unknown' / 'GST_PAD_UNKNOWN'
+
+=item * 'src' / 'GST_PAD_SRC'
+
+=item * 'sink' / 'GST_PAD_SINK'
+
+=back
+
+
+
+
+=cut
+
+
+=head1 SEE ALSO
+
+L<GStreamer>, L<Glib::Object>, L<GStreamer::Object>
+
+
+=cut
+
+
+=head1 COPYRIGHT
+
+Copyright (C) 2005-2014 by the gtk2-perl team.
+
+This software is licensed under the LGPL.  See L<GStreamer> for a full notice.
+
+
+
+=cut
+

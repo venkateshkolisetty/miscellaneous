@@ -1,0 +1,96 @@
+=head1 NAME
+
+Gtk2::Activatable
+
+=cut
+
+=head1 HIERARCHY
+
+  Glib::Interface
+  +----Gtk2::Activatable
+
+
+
+=cut
+
+
+=head1 METHODS
+
+=head2 $activatable-E<gt>B<do_set_related_action> ($action)
+
+=over
+
+=item * $action (Gtk2::Action) 
+
+=back
+
+=head2 action or undef = $activatable-E<gt>B<get_related_action> 
+
+=head2 $activatable-E<gt>B<set_related_action> ($action)
+
+=over
+
+=item * $action (Gtk2::Action) 
+
+=back
+
+=head2 $activatable-E<gt>B<sync_action_properties> ($action)
+
+=over
+
+=item * $action (Gtk2::Action) 
+
+=back
+
+=head2 boolean = $activatable-E<gt>B<get_use_action_appearance> 
+
+=head2 $activatable-E<gt>B<set_use_action_appearance> ($use_appearance)
+
+=over
+
+=item * $use_appearance (boolean) 
+
+=back
+
+
+
+=cut
+
+
+=head1 PROPERTIES
+
+=over
+
+=item 'related-action' (Gtk2::Action : default undef : readable / writable / private)
+
+The action this activatable will activate and receive updates from
+
+=item 'use-action-appearance' (boolean : default true : readable / writable / private)
+
+Whether to use the related actions appearance properties
+
+=back
+
+
+
+=cut
+
+
+=head1 SEE ALSO
+
+L<Gtk2>, L<Glib::Interface>
+
+
+=cut
+
+
+=head1 COPYRIGHT
+
+Copyright (C) 2003-2011 by the gtk2-perl team.
+
+This software is licensed under the LGPL.  See L<Gtk2> for a full notice.
+
+
+
+=cut
+

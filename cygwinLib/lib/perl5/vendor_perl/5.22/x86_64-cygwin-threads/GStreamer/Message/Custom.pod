@@ -1,0 +1,114 @@
+=head1 NAME
+
+GStreamer::Message::Custom
+
+=cut
+
+
+=head1 METHODS
+
+=head2 GstMessage = GStreamer::Message::Custom-E<gt>B<new> ($type, $src, $structure)
+
+=over
+
+=item * $type (GStreamer::MessageType) 
+
+=item * $src (GStreamer::Object) 
+
+=item * $structure (GStreamer::Structure) 
+
+=back
+
+
+
+=cut
+
+
+=head1 ENUMS AND FLAGS
+
+=head2 flags GStreamer::MessageType
+
+=over
+
+=item * 'unknown' / 'GST_MESSAGE_UNKNOWN'
+
+=item * 'eos' / 'GST_MESSAGE_EOS'
+
+=item * 'error' / 'GST_MESSAGE_ERROR'
+
+=item * 'warning' / 'GST_MESSAGE_WARNING'
+
+=item * 'info' / 'GST_MESSAGE_INFO'
+
+=item * 'tag' / 'GST_MESSAGE_TAG'
+
+=item * 'buffering' / 'GST_MESSAGE_BUFFERING'
+
+=item * 'state-changed' / 'GST_MESSAGE_STATE_CHANGED'
+
+=item * 'state-dirty' / 'GST_MESSAGE_STATE_DIRTY'
+
+=item * 'step-done' / 'GST_MESSAGE_STEP_DONE'
+
+=item * 'clock-provide' / 'GST_MESSAGE_CLOCK_PROVIDE'
+
+=item * 'clock-lost' / 'GST_MESSAGE_CLOCK_LOST'
+
+=item * 'new-clock' / 'GST_MESSAGE_NEW_CLOCK'
+
+=item * 'structure-change' / 'GST_MESSAGE_STRUCTURE_CHANGE'
+
+=item * 'stream-status' / 'GST_MESSAGE_STREAM_STATUS'
+
+=item * 'application' / 'GST_MESSAGE_APPLICATION'
+
+=item * 'element' / 'GST_MESSAGE_ELEMENT'
+
+=item * 'segment-start' / 'GST_MESSAGE_SEGMENT_START'
+
+=item * 'segment-done' / 'GST_MESSAGE_SEGMENT_DONE'
+
+=item * 'duration' / 'GST_MESSAGE_DURATION'
+
+=item * 'latency' / 'GST_MESSAGE_LATENCY'
+
+=item * 'async-start' / 'GST_MESSAGE_ASYNC_START'
+
+=item * 'async-done' / 'GST_MESSAGE_ASYNC_DONE'
+
+=item * 'request-state' / 'GST_MESSAGE_REQUEST_STATE'
+
+=item * 'step-start' / 'GST_MESSAGE_STEP_START'
+
+=item * 'qos' / 'GST_MESSAGE_QOS'
+
+=item * 'progress' / 'GST_MESSAGE_PROGRESS'
+
+=item * 'any' / 'GST_MESSAGE_ANY'
+
+=back
+
+
+
+
+=cut
+
+
+=head1 SEE ALSO
+
+L<GStreamer>
+
+
+=cut
+
+
+=head1 COPYRIGHT
+
+Copyright (C) 2005-2014 by the gtk2-perl team.
+
+This software is licensed under the LGPL.  See L<GStreamer> for a full notice.
+
+
+
+=cut
+

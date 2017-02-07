@@ -1,0 +1,83 @@
+=head1 NAME
+
+Gtk2::SourceView2::StyleScheme
+
+=cut
+
+=head1 HIERARCHY
+
+  Glib::Object
+  +----Gtk2::SourceView2::StyleScheme
+
+
+
+=cut
+
+
+=head1 METHODS
+
+=head2 list = $style-E<gt>B<get_authors> 
+
+=head2 string or undef = $style-E<gt>B<get_description> 
+
+=head2 string or undef = $style-E<gt>B<get_filename> 
+
+=head2 string = $style-E<gt>B<get_id> 
+
+=head2 string = $style-E<gt>B<get_name> 
+
+=head2 style or undef = $style-E<gt>B<get_style> ($style_id)
+
+=over
+
+=item * $style_id (string) 
+
+=back
+
+
+
+=cut
+
+
+=head1 PROPERTIES
+
+=over
+
+=item 'description' (string : default undef : readable)
+
+Style scheme description
+
+=item 'filename' (string : default undef : readable)
+
+Style scheme filename
+
+=item 'id' (string : default undef : readable / writable / construct-only)
+
+Style scheme id
+
+=item 'name' (string : default undef : readable)
+
+Style scheme name
+
+=back
+
+
+
+=cut
+
+
+=head1 SEE ALSO
+
+L<Gtk2::SourceView2>, L<Glib::Object>
+
+
+=cut
+
+
+=head1 COPYRIGHT
+
+Copyright (C) 2009 by Emmanuel Rodriguez
+
+
+=cut
+

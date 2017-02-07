@@ -1,0 +1,15 @@
+
+=head1 NAME
+
+Gnome2::Rsvg - API Reference Pod Index
+
+=head1 PAGES
+
+=over
+
+=item L<Gnome2::Rsvg::Handle>
+
+=item L<Gnome2::Rsvg::main>
+
+=back
+

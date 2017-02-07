@@ -1,0 +1,210 @@
+=head1 NAME
+
+GStreamer::Caps
+
+=cut
+
+=for position SYNOPSIS
+
+=head1 SYNOPSIS
+
+  my $empty = GStreamer::Caps::Empty -> new();
+
+  my $any = GStreamer::Caps::Any -> new();
+
+  my $structure = {
+    name => "urgs",
+    fields => [
+      [field_one => "Glib::String" => "urgs"],
+      [field_two => "Glib::Int" => 23]
+    ]
+  };
+  my $full = GStreamer::Caps::Full -> new($structure);
+
+  my $simple = GStreamer::Caps::Simple -> new(
+     	         "audio/mpeg",
+                 field_one => "Glib::String" => "urgs",
+                 field_two => "Glib::Int" => 23);
+
+=cut
+
+
+
+=for position DESCRIPTION
+
+=head1 DESCRIPTION
+
+To create a I<GStreamer::Caps> object, you call one of the following
+constructors:
+
+=over
+
+=item GStreamer::Caps::Any-E<gt>new
+
+=item GStreamer::Caps::Empty-E<gt>new
+
+=item GStreamer::Caps::Full-E<gt>new
+
+=item GStreamer::Caps::Simple-E<gt>new
+
+=back
+
+=cut
+
+
+
+=head1 HIERARCHY
+
+  Glib::Boxed
+  +----GStreamer::Caps
+
+
+
+=cut
+
+
+=head1 METHODS
+
+=head2 $caps1-E<gt>B<append> ($caps2)
+
+=over
+
+=item * $caps2 (GStreamer::Caps) 
+
+=back
+
+=head2 $caps-E<gt>B<append_structure> ($structure)
+
+=over
+
+=item * $structure (GStreamer::Structure) 
+
+=back
+
+=head2 boolean = $caps-E<gt>B<do_simplify> 
+
+=head2 caps = GStreamer::Caps-E<gt>B<from_string> ($string)
+
+=over
+
+=item * $string (string) 
+
+=back
+
+=head2 caps = $caps1-E<gt>B<intersect> ($caps2)
+
+=over
+
+=item * $caps2 (GStreamer::Caps) 
+
+=back
+
+=head2 boolean = $caps1-E<gt>B<is_always_compatible> ($caps2)
+
+=over
+
+=item * $caps2 (GStreamer::Caps) 
+
+=back
+
+=head2 boolean = $caps-E<gt>B<is_any> 
+
+=head2 boolean = $caps-E<gt>B<is_empty> 
+
+=head2 boolean = $caps1-E<gt>B<is_equal> ($caps2)
+
+=over
+
+=item * $caps2 (GStreamer::Caps) 
+
+=back
+
+=head2 boolean = $caps1-E<gt>B<is_equal_fixed> ($caps2)
+
+=over
+
+=item * $caps2 (GStreamer::Caps) 
+
+=back
+
+=head2 boolean = $caps-E<gt>B<is_fixed> 
+
+=head2 boolean = $subset-E<gt>B<is_subset> ($superset)
+
+=over
+
+=item * $superset (GStreamer::Caps) 
+
+=back
+
+=head2 caps = $caps-E<gt>B<make_writable> 
+
+=head2 caps = $caps-E<gt>B<normalize> 
+
+=head2 $caps-E<gt>B<set_simple> ($field, $type, $value, ...)
+
+=over
+
+=item * $field (string) 
+
+=item * $type (string) 
+
+=item * $value (scalar) 
+
+=item * ... (list) 
+
+=back
+
+=head2 integer = $caps-E<gt>B<get_size> 
+
+=head2 structure = $caps-E<gt>B<get_structure> ($index)
+
+=over
+
+=item * $index (integer) 
+
+=back
+
+=head2 caps = $minuend-E<gt>B<subtract> ($subtrahend)
+
+=over
+
+=item * $subtrahend (GStreamer::Caps) 
+
+=back
+
+=head2 string = $caps-E<gt>B<to_string> 
+
+=head2 $caps-E<gt>B<truncate> 
+
+=head2 caps = $caps1-E<gt>B<union> ($caps2)
+
+=over
+
+=item * $caps2 (GStreamer::Caps) 
+
+=back
+
+
+
+=cut
+
+
+=head1 SEE ALSO
+
+L<GStreamer>, L<Glib::Boxed>
+
+
+=cut
+
+
+=head1 COPYRIGHT
+
+Copyright (C) 2005-2014 by the gtk2-perl team.
+
+This software is licensed under the LGPL.  See L<GStreamer> for a full notice.
+
+
+
+=cut
+

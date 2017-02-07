@@ -1,0 +1,431 @@
+=head1 NAME
+
+GStreamer::Element
+
+=cut
+
+=head1 HIERARCHY
+
+  Glib::Object
+  +----GStreamer::Object
+       +----GStreamer::Element
+
+
+
+=cut
+
+
+=head1 METHODS
+
+=head2 $element-E<gt>B<abort_state> 
+
+=head2 boolean = $element-E<gt>B<add_pad> ($pad)
+
+=over
+
+=item * $pad (GStreamer::Pad) 
+
+=back
+
+=head2 unsigned integer = $element-E<gt>B<get_base_time> 
+
+=head2 $element-E<gt>B<set_base_time> ($time)
+
+=over
+
+=item * $time (unsigned integer) 
+
+=back
+
+=head2 bus or undef = $element-E<gt>B<get_bus> 
+
+=head2 clock or undef = $element-E<gt>B<get_clock> 
+
+=head2 $element-E<gt>B<set_clock> ($clock)
+
+=over
+
+=item * $clock (GStreamer::Clock or undef) 
+
+=back
+
+=head2 pad = $element-E<gt>B<get_compatible_pad> ($pad, $caps)
+
+=over
+
+=item * $pad (GStreamer::Pad) 
+
+=item * $caps (GStreamer::Caps) 
+
+=back
+
+=head2 padtemplate or undef = $element-E<gt>B<get_compatible_pad_template> ($compattempl)
+
+=over
+
+=item * $compattempl (GStreamer::PadTemplate) 
+
+=back
+
+=head2 statechangereturn = $element-E<gt>B<continue_state> ($ret)
+
+=over
+
+=item * $ret (GStreamer::StateChangeReturn) 
+
+=back
+
+=head2 elementfactory = $element-E<gt>B<get_factory> 
+
+=head2 $element-E<gt>B<found_tags> ($tag_list)
+
+=over
+
+=item * $tag_list (GStreamer::TagList) 
+
+=back
+
+=head2 $element-E<gt>B<found_tags_for_pad> ($pad, $list)
+
+=over
+
+=item * $pad (GStreamer::Pad) 
+
+=item * $list (GStreamer::TagList) 
+
+=back
+
+=head2 index or undef = $element-E<gt>B<get_index> 
+
+=head2 $element-E<gt>B<set_index> ($index)
+
+=over
+
+=item * $index (GStreamer::Index) 
+
+=back
+
+=head2 boolean = $element-E<gt>B<is_indexable> 
+
+=head2 boolean = $element-E<gt>B<is_locked_state> 
+
+=head2 iterator = $element-E<gt>B<iterate_pads> 
+
+=head2 iterator = $element-E<gt>B<iterate_sink_pads> 
+
+=head2 iterator = $element-E<gt>B<iterate_src_pads> 
+
+=head2 boolean = $src-E<gt>B<link> ($dest, ...)
+
+=over
+
+=item * $dest (GStreamer::Element) 
+
+=item * ... (list) 
+
+=back
+
+=head2 boolean = $src-E<gt>B<link_filtered> ($dest, $filtercaps)
+
+=over
+
+=item * $dest (GStreamer::Element) 
+
+=item * $filtercaps (GStreamer::Caps or undef) 
+
+=back
+
+=head2 boolean = $src-E<gt>B<link_pads> ($srcpadname, $dest, $destpadname)
+
+=over
+
+=item * $srcpadname (string) 
+
+=item * $dest (GStreamer::Element) 
+
+=item * $destpadname (string) 
+
+=back
+
+=head2 boolean = $src-E<gt>B<link_pads_filtered> ($srcpadname, $dest, $destpadname, $filtercaps)
+
+=over
+
+=item * $srcpadname (string) 
+
+=item * $dest (GStreamer::Element) 
+
+=item * $destpadname (string) 
+
+=item * $filtercaps (GStreamer::Caps or undef) 
+
+=back
+
+=head2 boolean = $element-E<gt>B<set_locked_state> ($locked_state)
+
+=over
+
+=item * $locked_state (boolean) 
+
+=back
+
+=head2 $element-E<gt>B<lost_state> 
+
+=head2 $element-E<gt>B<no_more_pads> 
+
+=head2 pad or undef = $element-E<gt>B<get_pad> ($name)
+
+=over
+
+=item * $name (string) 
+
+=back
+
+=head2 boolean = $element-E<gt>B<post_message> ($message)
+
+=over
+
+=item * $message (GstMessage) 
+
+=back
+
+=head2 clock or undef = $element-E<gt>B<provide_clock> 
+
+=head2 boolean = $element-E<gt>B<provides_clock> 
+
+=head2 boolean = $element-E<gt>B<query> ($query)
+
+=over
+
+=item * $query (GstQuery) 
+
+=back
+
+=head2 list = $element-E<gt>B<get_query_types> 
+
+=head2 boolean = $element-E<gt>B<remove_pad> ($pad)
+
+=over
+
+=item * $pad (GStreamer::Pad) 
+
+=back
+
+=head2 pad or undef = $element-E<gt>B<get_request_pad> ($name)
+
+=over
+
+=item * $name (string) 
+
+=back
+
+=head2 boolean = $element-E<gt>B<requires_clock> 
+
+=head2 boolean = $element-E<gt>B<seek> ($rate, $format, $flags, $cur_type, $cur, $stop_type, $stop)
+
+=over
+
+=item * $rate (double) 
+
+=item * $format (GStreamer::Format) 
+
+=item * $flags (GStreamer::SeekFlags) 
+
+=item * $cur_type (GStreamer::SeekType) 
+
+=item * $cur (64 bit integer) 
+
+=item * $stop_type (GStreamer::SeekType) 
+
+=item * $stop (64 bit integer) 
+
+=back
+
+=head2 boolean = $element-E<gt>B<send_event> ($event)
+
+=over
+
+=item * $event (GstEvent) 
+
+=back
+
+=head2 list = $element-E<gt>B<get_state> ($timeout)
+
+=over
+
+=item * $timeout (unsigned integer) 
+
+=back
+
+=head2 statechangereturn = $element-E<gt>B<set_state> ($state)
+
+=over
+
+=item * $state (GStreamer::State) 
+
+=back
+
+=head2 pad or undef = $element-E<gt>B<get_static_pad> ($name)
+
+=over
+
+=item * $name (string) 
+
+=back
+
+=head2 boolean = $element-E<gt>B<sync_state_with_parent> 
+
+=head2 $src-E<gt>B<unlink> ($dest, ...)
+
+=over
+
+=item * $dest (GStreamer::Element) 
+
+=item * ... (list) 
+
+=back
+
+=head2 $src-E<gt>B<unlink_pads> ($srcpadname, $dest, $destpadname)
+
+=over
+
+=item * $srcpadname (string) 
+
+=item * $dest (GStreamer::Element) 
+
+=item * $destpadname (string) 
+
+=back
+
+
+
+=cut
+
+
+=head1 SIGNALS
+
+=over
+
+=item B<pad-added> (GStreamer::Element, GStreamer::Pad)
+
+=item B<pad-removed> (GStreamer::Element, GStreamer::Pad)
+
+=item B<no-more-pads> (GStreamer::Element)
+
+=back
+
+
+
+=cut
+
+
+=head1 ENUMS AND FLAGS
+
+=head2 enum GStreamer::Format
+
+=over
+
+=item * 'undefined' / 'GST_FORMAT_UNDEFINED'
+
+=item * 'default' / 'GST_FORMAT_DEFAULT'
+
+=item * 'bytes' / 'GST_FORMAT_BYTES'
+
+=item * 'time' / 'GST_FORMAT_TIME'
+
+=item * 'buffers' / 'GST_FORMAT_BUFFERS'
+
+=item * 'percent' / 'GST_FORMAT_PERCENT'
+
+=back
+
+
+=head2 flags GStreamer::SeekFlags
+
+=over
+
+=item * 'none' / 'GST_SEEK_FLAG_NONE'
+
+=item * 'flush' / 'GST_SEEK_FLAG_FLUSH'
+
+=item * 'accurate' / 'GST_SEEK_FLAG_ACCURATE'
+
+=item * 'key-unit' / 'GST_SEEK_FLAG_KEY_UNIT'
+
+=item * 'segment' / 'GST_SEEK_FLAG_SEGMENT'
+
+=item * 'skip' / 'GST_SEEK_FLAG_SKIP'
+
+=back
+
+
+=head2 enum GStreamer::SeekType
+
+=over
+
+=item * 'none' / 'GST_SEEK_TYPE_NONE'
+
+=item * 'cur' / 'GST_SEEK_TYPE_CUR'
+
+=item * 'set' / 'GST_SEEK_TYPE_SET'
+
+=item * 'end' / 'GST_SEEK_TYPE_END'
+
+=back
+
+
+=head2 enum GStreamer::State
+
+=over
+
+=item * 'void-pending' / 'GST_STATE_VOID_PENDING'
+
+=item * 'null' / 'GST_STATE_NULL'
+
+=item * 'ready' / 'GST_STATE_READY'
+
+=item * 'paused' / 'GST_STATE_PAUSED'
+
+=item * 'playing' / 'GST_STATE_PLAYING'
+
+=back
+
+
+=head2 enum GStreamer::StateChangeReturn
+
+=over
+
+=item * 'failure' / 'GST_STATE_CHANGE_FAILURE'
+
+=item * 'success' / 'GST_STATE_CHANGE_SUCCESS'
+
+=item * 'async' / 'GST_STATE_CHANGE_ASYNC'
+
+=item * 'no-preroll' / 'GST_STATE_CHANGE_NO_PREROLL'
+
+=back
+
+
+
+
+=cut
+
+
+=head1 SEE ALSO
+
+L<GStreamer>, L<Glib::Object>, L<GStreamer::Object>
+
+
+=cut
+
+
+=head1 COPYRIGHT
+
+Copyright (C) 2005-2014 by the gtk2-perl team.
+
+This software is licensed under the LGPL.  See L<GStreamer> for a full notice.
+
+
+
+=cut
+

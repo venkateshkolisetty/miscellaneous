@@ -1,0 +1,374 @@
+=head1 NAME
+
+Gtk2::SourceView2::PrintCompositor
+
+=cut
+
+=head1 HIERARCHY
+
+  Glib::Object
+  +----Gtk2::SourceView2::PrintCompositor
+
+
+
+=cut
+
+
+=head1 METHODS
+
+=head2 printcompositor = Gtk2::SourceView2::PrintCompositor-E<gt>B<new> ($buffer)
+
+=over
+
+=item * $buffer (Gtk2::SourceView2::Buffer) 
+
+=back
+
+=head2 printcompositor = Gtk2::SourceView2::PrintCompositor-E<gt>B<new_from_view> ($view)
+
+=over
+
+=item * $view (Gtk2::SourceView2::View) 
+
+=back
+
+=head2 string = $compositor-E<gt>B<get_body_font_name> 
+
+=head2 $compositor-E<gt>B<set_body_font_name> ($font_name)
+
+=over
+
+=item * $font_name (string) 
+
+=back
+
+=head2 double = $compositor-E<gt>B<get_bottom_margin> ($unit)
+
+=over
+
+=item * $unit (Gtk2::Unit) 
+
+=back
+
+=head2 $compositor-E<gt>B<set_bottom_margin> ($margin, $unit)
+
+=over
+
+=item * $margin (double) 
+
+=item * $unit (Gtk2::Unit) 
+
+=back
+
+=head2 buffer = $compositor-E<gt>B<get_buffer> 
+
+=head2 $compositor-E<gt>B<draw_page> ($context, $page_nr)
+
+=over
+
+=item * $context (Gtk2::PrintContext) 
+
+=item * $page_nr (integer) 
+
+=back
+
+=head2 string = $compositor-E<gt>B<get_footer_font_name> 
+
+=head2 $compositor-E<gt>B<set_footer_font_name> ($font_name)
+
+=over
+
+=item * $font_name (string or undef) 
+
+=back
+
+=head2 $compositor-E<gt>B<set_footer_format> ($separator, $left, $center, $right)
+
+=over
+
+=item * $separator (boolean) 
+
+=item * $left (string or undef) 
+
+=item * $center (string or undef) 
+
+=item * $right (string or undef) 
+
+=back
+
+=head2 string = $compositor-E<gt>B<get_header_font_name> 
+
+=head2 $compositor-E<gt>B<set_header_font_name> ($font_name)
+
+=over
+
+=item * $font_name (string or undef) 
+
+=back
+
+=head2 $compositor-E<gt>B<set_header_format> ($separator, $left, $center, $right)
+
+=over
+
+=item * $separator (boolean) 
+
+=item * $left (string or undef) 
+
+=item * $center (string or undef) 
+
+=item * $right (string or undef) 
+
+=back
+
+=head2 boolean = $compositor-E<gt>B<get_highlight_syntax> 
+
+=head2 $compositor-E<gt>B<set_highlight_syntax> ($highlight)
+
+=over
+
+=item * $highlight (boolean) 
+
+=back
+
+=head2 double = $compositor-E<gt>B<get_left_margin> ($unit)
+
+=over
+
+=item * $unit (Gtk2::Unit) 
+
+=back
+
+=head2 $compositor-E<gt>B<set_left_margin> ($margin, $unit)
+
+=over
+
+=item * $margin (double) 
+
+=item * $unit (Gtk2::Unit) 
+
+=back
+
+=head2 string = $compositor-E<gt>B<get_line_numbers_font_name> 
+
+=head2 $compositor-E<gt>B<set_line_numbers_font_name> ($font_name)
+
+=over
+
+=item * $font_name (string or undef) 
+
+=back
+
+=head2 integer = $compositor-E<gt>B<get_n_pages> 
+
+=head2 boolean = $compositor-E<gt>B<paginate> ($context)
+
+=over
+
+=item * $context (Gtk2::PrintContext) 
+
+=back
+
+=head2 double = $compositor-E<gt>B<get_pagination_progress> 
+
+=head2 boolean = $compositor-E<gt>B<get_print_footer> 
+
+=head2 $compositor-E<gt>B<set_print_footer> ($print)
+
+=over
+
+=item * $print (boolean) 
+
+=back
+
+=head2 boolean = $compositor-E<gt>B<get_print_header> 
+
+=head2 $compositor-E<gt>B<set_print_header> ($print)
+
+=over
+
+=item * $print (boolean) 
+
+=back
+
+=head2 integer = $compositor-E<gt>B<get_print_line_numbers> 
+
+=head2 $compositor-E<gt>B<set_print_line_numbers> ($interval)
+
+=over
+
+=item * $interval (integer) 
+
+=back
+
+=head2 double = $compositor-E<gt>B<get_right_margin> ($unit)
+
+=over
+
+=item * $unit (Gtk2::Unit) 
+
+=back
+
+=head2 $compositor-E<gt>B<set_right_margin> ($margin, $unit)
+
+=over
+
+=item * $margin (double) 
+
+=item * $unit (Gtk2::Unit) 
+
+=back
+
+=head2 integer = $compositor-E<gt>B<get_tab_width> 
+
+=head2 $compositor-E<gt>B<set_tab_width> ($width)
+
+=over
+
+=item * $width (integer) 
+
+=back
+
+=head2 double = $compositor-E<gt>B<get_top_margin> ($unit)
+
+=over
+
+=item * $unit (Gtk2::Unit) 
+
+=back
+
+=head2 $compositor-E<gt>B<set_top_margin> ($margin, $unit)
+
+=over
+
+=item * $margin (double) 
+
+=item * $unit (Gtk2::Unit) 
+
+=back
+
+=head2 wrapmode = $compositor-E<gt>B<get_wrap_mode> 
+
+=head2 $compositor-E<gt>B<set_wrap_mode> ($wrap_mode)
+
+=over
+
+=item * $wrap_mode (Gtk2::WrapMode) 
+
+=back
+
+
+
+=cut
+
+
+=head1 PROPERTIES
+
+=over
+
+=item 'body-font-name' (string : default undef : readable / writable)
+
+Name of the font to use for the text body (e.g. "Monospace 10")
+
+=item 'buffer' (Gtk2::SourceView2::Buffer : default undef : readable / writable / construct-only)
+
+The GtkSourceBuffer object to print
+
+=item 'footer-font-name' (string : default undef : readable / writable)
+
+Name of the font to use for the page footer (e.g. "Monospace 10")
+
+=item 'header-font-name' (string : default undef : readable / writable)
+
+Name of the font to use for the page header (e.g. "Monospace 10")
+
+=item 'highlight-syntax' (boolean : default true : readable / writable)
+
+Whether to print the document with highlighted syntax
+
+=item 'line-numbers-font-name' (string : default undef : readable / writable)
+
+Name of the font to use for the line numbers (e.g. "Monospace 10")
+
+=item 'n-pages' (integer : default -1 : readable)
+
+The number of pages in the document (-1 means the document has not been completely paginated).
+
+=item 'print-footer' (boolean : default false : readable / writable)
+
+Whether to print a footer in each page
+
+=item 'print-header' (boolean : default false : readable / writable)
+
+Whether to print a header in each page
+
+=item 'print-line-numbers' (Glib::UInt : default 1 : readable / writable)
+
+Interval of printed line numbers (0 means no numbers)
+
+=item 'tab-width' (Glib::UInt : default 8 : readable / writable)
+
+Width of a tab character expressed in spaces
+
+=item 'wrap-mode' (Gtk2::WrapMode : default "none" : readable / writable)
+
+Whether to wrap lines never, at word boundaries, or at character boundaries.
+
+=back
+
+
+
+=cut
+
+
+=head1 ENUMS AND FLAGS
+
+=head2 enum Gtk2::Unit
+
+=over
+
+=item * 'pixel' / 'GTK_UNIT_PIXEL'
+
+=item * 'points' / 'GTK_UNIT_POINTS'
+
+=item * 'inch' / 'GTK_UNIT_INCH'
+
+=item * 'mm' / 'GTK_UNIT_MM'
+
+=back
+
+
+=head2 enum Gtk2::WrapMode
+
+=over
+
+=item * 'none' / 'GTK_WRAP_NONE'
+
+=item * 'char' / 'GTK_WRAP_CHAR'
+
+=item * 'word' / 'GTK_WRAP_WORD'
+
+=item * 'word-char' / 'GTK_WRAP_WORD_CHAR'
+
+=back
+
+
+
+
+=cut
+
+
+=head1 SEE ALSO
+
+L<Gtk2::SourceView2>, L<Glib::Object>
+
+
+=cut
+
+
+=head1 COPYRIGHT
+
+Copyright (C) 2009 by Emmanuel Rodriguez
+
+
+=cut
+

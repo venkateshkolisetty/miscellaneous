@@ -1,0 +1,118 @@
+=head1 NAME
+
+Gtk2::WebKit::WebBackForwardList
+
+=cut
+
+=head1 HIERARCHY
+
+  Glib::Object
+  +----Gtk2::WebKit::WebBackForwardList
+
+
+
+=cut
+
+
+=head1 METHODS
+
+=head2 webbackforwardlist = Gtk2::WebKit::WebBackForwardList-E<gt>B<new_with_web_view> ($web_view)
+
+=over
+
+=item * $web_view (Gtk2::WebKit::WebView) 
+
+=back
+
+=head2 $web_back_forward_list-E<gt>B<add_item> ($history_item)
+
+=over
+
+=item * $history_item (Gtk2::WebKit::WebHistoryItem) 
+
+=back
+
+=head2 webhistoryitem = $web_back_forward_list-E<gt>B<get_back_item> 
+
+=head2 integer = $web_back_forward_list-E<gt>B<get_back_length> 
+
+=head2 list = $web_back_forward_list-E<gt>B<get_back_list_with_limit> ($limit)
+
+=over
+
+=item * $limit (integer) 
+
+=back
+
+=head2 boolean = $web_back_forward_list-E<gt>B<contains_item> ($history_item)
+
+=over
+
+=item * $history_item (Gtk2::WebKit::WebHistoryItem) 
+
+=back
+
+=head2 webhistoryitem = $web_back_forward_list-E<gt>B<get_current_item> 
+
+=head2 webhistoryitem = $web_back_forward_list-E<gt>B<get_forward_item> 
+
+=head2 integer = $web_back_forward_list-E<gt>B<get_forward_length> 
+
+=head2 list = $web_back_forward_list-E<gt>B<get_forward_list_with_limit> ($limit)
+
+=over
+
+=item * $limit (integer) 
+
+=back
+
+=head2 $web_back_forward_list-E<gt>B<go_back> 
+
+=head2 $web_back_forward_list-E<gt>B<go_forward> 
+
+=head2 $web_back_forward_list-E<gt>B<go_to_item> ($history_item)
+
+=over
+
+=item * $history_item (Gtk2::WebKit::WebHistoryItem) 
+
+=back
+
+=head2 integer = $web_back_forward_list-E<gt>B<get_limit> 
+
+=head2 $web_back_forward_list-E<gt>B<set_limit> ($limit)
+
+=over
+
+=item * $limit (integer) 
+
+=back
+
+=head2 webhistoryitem = $web_back_forward_list-E<gt>B<get_nth_item> ($index)
+
+=over
+
+=item * $index (integer) 
+
+=back
+
+
+
+=cut
+
+
+=head1 SEE ALSO
+
+L<Gtk2::WebKit>, L<Glib::Object>
+
+
+=cut
+
+
+=head1 COPYRIGHT
+
+Copyright (C) 2008, Florian Ragwitz
+
+
+=cut
+

@@ -1,0 +1,15 @@
+
+=head1 NAME
+
+Gnome2::Vte - API Reference Pod Index
+
+=head1 PAGES
+
+=over
+
+=item L<Gnome2::Vte::Terminal>
+
+=item L<Gnome2::Vte::main>
+
+=back
+

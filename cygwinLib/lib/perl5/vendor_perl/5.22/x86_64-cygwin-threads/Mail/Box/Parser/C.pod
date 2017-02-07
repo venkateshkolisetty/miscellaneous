@@ -1,0 +1,27 @@
+=head1 NAME
+
+Mail::Box::Parser::C - Parsing folders for MailBox with C routines
+
+=head1 DESCRIPTION
+
+The Mail::Box::Parser::C implements parsing of messages in ANSI C,
+using Perl's XS extension facility.  
+
+This is an optional module for MailBox, and will (once installed)
+automatically be used by MailBox to parse e-mail message content when
+the message is supplied as file-handle.  In all other cases,
+MailBox will use L<Mail::Box::Parser::Perl>.
+
+=head1 SEE ALSO
+
+This module is part of Mail-Box-Parser-C distribution version 3.007,
+built on March 04, 2013. Website: F<http://perl.overmeer.net/mailbox/>
+
+=head1 LICENSE
+
+Copyrights 2002-2004,2013 by [Mark Overmeer]. For other contributors see Changes.
+
+This program is free software; you can redistribute it and/or modify it
+under the same terms as Perl itself.
+See F<http://www.perl.com/perl/misc/Artistic.html>
+

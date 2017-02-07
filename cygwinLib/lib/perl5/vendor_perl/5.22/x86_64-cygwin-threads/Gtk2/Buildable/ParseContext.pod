@@ -1,0 +1,61 @@
+=head1 NAME
+
+Gtk2::Buildable::ParseContext
+
+=cut
+
+=for object Gtk2::Buildable::ParseContext
+
+=head1 DESCRIPTION
+
+This object contains context of the XML subset parser used by Gtk2::Builder.
+Objects of this type will be passed to the methods invoked on the parser
+returned from your Gtk2::Buildable's C<CUSTOM_TAG_START>.  You should use
+these methods to create useful error messages, as necessary.
+
+=cut
+
+
+
+
+=head1 METHODS
+
+=head2 string = $parse_context->B<get_element>
+
+Return the name of the currently open element.
+
+=head2 list = $parse_context->B<get_element_stack>
+
+Returns the element stack; the first item is the currently-open tag
+(which would be returned by C<get_element()>), and the next item is
+its immediate parent.
+
+Since: glib 2.16
+
+=head2 (line_number, char_number) = $parse_context->B<get_position>
+
+
+
+
+
+=cut
+
+
+=head1 SEE ALSO
+
+L<Gtk2>, L<Gtk2::Buildable>
+
+
+=cut
+
+
+=head1 COPYRIGHT
+
+Copyright (C) 2003-2011 by the gtk2-perl team.
+
+This software is licensed under the LGPL.  See L<Gtk2> for a full notice.
+
+
+
+=cut
+

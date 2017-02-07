@@ -1,0 +1,13 @@
+
+=head1 NAME
+
+Gtk2::Notify - API Reference Pod Index
+
+=head1 PAGES
+
+=over
+
+=item L<Gtk2::Notify>
+
+=back
+

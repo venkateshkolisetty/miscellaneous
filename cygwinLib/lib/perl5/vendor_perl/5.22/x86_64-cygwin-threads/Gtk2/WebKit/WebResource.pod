@@ -1,0 +1,110 @@
+=head1 NAME
+
+Gtk2::WebKit::WebResource
+
+=cut
+
+=head1 HIERARCHY
+
+  Glib::Object
+  +----Gtk2::WebKit::WebResource
+
+
+
+=cut
+
+
+=head1 METHODS
+
+=head2 webresource = Gtk2::WebKit::WebResource-E<gt>B<new> ($data, $url, $mime_type, $encoding, $frame_name)
+
+=over
+
+=item * $data (scalar) 
+
+=item * $url (string) 
+
+=item * $mime_type (string) 
+
+=item * $encoding (string) 
+
+=item * $frame_name (string) 
+
+=back
+
+=head2 scalar = $web_resource-E<gt>B<get_data> 
+
+=head2 string = $web_resource-E<gt>B<get_encoding> 
+
+=head2 string = $web_resource-E<gt>B<get_frame_name> 
+
+=head2 string = $web_resource-E<gt>B<get_mime_type> 
+
+=head2 string = $web_resource-E<gt>B<get_uri> 
+
+
+
+=cut
+
+
+=head1 PROPERTIES
+
+=over
+
+=item 'encoding' (string : default undef : readable / private)
+
+The text encoding name of the resource
+
+=item 'frame-name' (string : default undef : readable / private)
+
+The frame name of the resource
+
+=item 'mime-type' (string : default undef : readable / private)
+
+The MIME type of the resource
+
+=item 'uri' (string : default undef : readable / writable / construct-only / private)
+
+The URI of the resource
+
+=back
+
+
+
+=cut
+
+
+=head1 SIGNALS
+
+=over
+
+=item B<response-received> (Gtk2::WebKit::WebResource, Gtk2::WebKit::NetworkResponse)
+
+=item B<load-failed> (Gtk2::WebKit::WebResource, gpointer)
+
+=item B<load-finished> (Gtk2::WebKit::WebResource)
+
+=item B<content-length-received> (Gtk2::WebKit::WebResource, integer)
+
+=back
+
+
+
+=cut
+
+
+=head1 SEE ALSO
+
+L<Gtk2::WebKit>, L<Glib::Object>
+
+
+=cut
+
+
+=head1 COPYRIGHT
+
+Copyright (C) 2008, Florian Ragwitz
+
+
+=cut
+

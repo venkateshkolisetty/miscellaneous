@@ -1,0 +1,44 @@
+=head1 NAME
+
+Gtk2::WebKit::WebPolicyDecision
+
+=cut
+
+=head1 HIERARCHY
+
+  Glib::Object
+  +----Gtk2::WebKit::WebPolicyDecision
+
+
+
+=cut
+
+
+=head1 METHODS
+
+=head2 $decision-E<gt>B<download> 
+
+=head2 $decision-E<gt>B<ignore> 
+
+=head2 $decision-E<gt>B<use> 
+
+
+
+=cut
+
+
+=head1 SEE ALSO
+
+L<Gtk2::WebKit>, L<Glib::Object>
+
+
+=cut
+
+
+=head1 COPYRIGHT
+
+Copyright (C) 2008, Florian Ragwitz
+
+
+=cut
+

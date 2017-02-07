@@ -1,0 +1,158 @@
+=head1 NAME
+
+GStreamer::Buffer
+
+=cut
+
+
+=head1 METHODS
+
+=head2 GstBuffer = GStreamer::Buffer-E<gt>B<new> 
+
+=head2 caps or undef = $buffer-E<gt>B<get_caps> 
+
+=head2 $buffer-E<gt>B<set_caps> ($caps)
+
+=over
+
+=item * $caps (GStreamer::Caps) 
+
+=back
+
+=head2 GstBuffer = $parent-E<gt>B<create_sub> ($offset, $size)
+
+=over
+
+=item * $offset (integer) 
+
+=item * $size (integer) 
+
+=back
+
+=head2 scalar = $buffer-E<gt>B<data> 
+
+=head2 void = $buffer-E<gt>B<data_ptr> 
+
+=head2 $buf-E<gt>B<set_data> ($data)
+
+=over
+
+=item * $data (scalar) 
+
+=back
+
+=head2 unsigned integer = $buffer-E<gt>B<duration> 
+
+=head2 bufferflag = $buffer-E<gt>B<flags> 
+
+=head2 boolean = $buf1-E<gt>B<is_span_fast> ($buf2)
+
+=over
+
+=item * $buf2 (GstBuffer) 
+
+=back
+
+=head2 GstBuffer = $buf1-E<gt>B<join> ($buf2)
+
+=over
+
+=item * $buf2 (GstBuffer) 
+
+=back
+
+=head2 GstBuffer = $buf1-E<gt>B<merge> ($buf2)
+
+=over
+
+=item * $buf2 (GstBuffer) 
+
+=back
+
+=head2 64 bit unsigned = $buffer-E<gt>B<offset> 
+
+=head2 64 bit unsigned = $buffer-E<gt>B<offset_end> 
+
+=head2 integer = $buffer-E<gt>B<size> 
+
+=head2 GstBuffer = $buf1-E<gt>B<span> ($offset, $buf2, $len)
+
+=over
+
+=item * $offset (unsigned) 
+
+=item * $buf2 (GstBuffer) 
+
+=item * $len (unsigned) 
+
+=back
+
+=head2 $dest-E<gt>B<stamp> ($src)
+
+=over
+
+=item * $src (GstBuffer) 
+
+=back
+
+=head2 unsigned integer = $buffer-E<gt>B<timestamp> 
+
+
+
+=cut
+
+
+=head1 ENUMS AND FLAGS
+
+=head2 flags GStreamer::BufferFlag
+
+=over
+
+=item * 'readonly' / 'GST_BUFFER_FLAG_READONLY'
+
+=item * 'media4' / 'GST_BUFFER_FLAG_MEDIA4'
+
+=item * 'preroll' / 'GST_BUFFER_FLAG_PREROLL'
+
+=item * 'discont' / 'GST_BUFFER_FLAG_DISCONT'
+
+=item * 'in-caps' / 'GST_BUFFER_FLAG_IN_CAPS'
+
+=item * 'gap' / 'GST_BUFFER_FLAG_GAP'
+
+=item * 'delta-unit' / 'GST_BUFFER_FLAG_DELTA_UNIT'
+
+=item * 'media1' / 'GST_BUFFER_FLAG_MEDIA1'
+
+=item * 'media2' / 'GST_BUFFER_FLAG_MEDIA2'
+
+=item * 'media3' / 'GST_BUFFER_FLAG_MEDIA3'
+
+=item * 'last' / 'GST_BUFFER_FLAG_LAST'
+
+=back
+
+
+
+
+=cut
+
+
+=head1 SEE ALSO
+
+L<GStreamer>
+
+
+=cut
+
+
+=head1 COPYRIGHT
+
+Copyright (C) 2005-2014 by the gtk2-perl team.
+
+This software is licensed under the LGPL.  See L<GStreamer> for a full notice.
+
+
+
+=cut
+

@@ -1,0 +1,82 @@
+=head1 NAME
+
+GStreamer::Query::Application
+
+=cut
+
+
+=head1 METHODS
+
+=head2 GstQuery = GStreamer::Query::Application-E<gt>B<new> ($type, $structure)
+
+=over
+
+=item * $type (GStreamer::QueryType) 
+
+=item * $structure (GStreamer::Structure) 
+
+=back
+
+
+
+=cut
+
+
+=head1 ENUMS AND FLAGS
+
+=head2 enum GStreamer::QueryType
+
+=over
+
+=item * 'none' / 'GST_QUERY_NONE'
+
+=item * 'position' / 'GST_QUERY_POSITION'
+
+=item * 'duration' / 'GST_QUERY_DURATION'
+
+=item * 'latency' / 'GST_QUERY_LATENCY'
+
+=item * 'jitter' / 'GST_QUERY_JITTER'
+
+=item * 'rate' / 'GST_QUERY_RATE'
+
+=item * 'seeking' / 'GST_QUERY_SEEKING'
+
+=item * 'segment' / 'GST_QUERY_SEGMENT'
+
+=item * 'convert' / 'GST_QUERY_CONVERT'
+
+=item * 'formats' / 'GST_QUERY_FORMATS'
+
+=item * 'buffering' / 'GST_QUERY_BUFFERING'
+
+=item * 'custom' / 'GST_QUERY_CUSTOM'
+
+=item * 'uri' / 'GST_QUERY_URI'
+
+=back
+
+
+
+
+=cut
+
+
+=head1 SEE ALSO
+
+L<GStreamer>
+
+
+=cut
+
+
+=head1 COPYRIGHT
+
+Copyright (C) 2005-2014 by the gtk2-perl team.
+
+This software is licensed under the LGPL.  See L<GStreamer> for a full notice.
+
+
+
+=cut
+

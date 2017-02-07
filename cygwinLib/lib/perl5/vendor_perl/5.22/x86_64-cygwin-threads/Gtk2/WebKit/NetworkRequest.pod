@@ -1,0 +1,75 @@
+=head1 NAME
+
+Gtk2::WebKit::NetworkRequest
+
+=cut
+
+=head1 HIERARCHY
+
+  Glib::Object
+  +----Gtk2::WebKit::NetworkRequest
+
+
+
+=cut
+
+
+=head1 METHODS
+
+=head2 networkrequest = Gtk2::WebKit::NetworkRequest-E<gt>B<new> ($uri)
+
+=over
+
+=item * $uri (string) 
+
+=back
+
+=head2 string = $request-E<gt>B<get_uri> 
+
+=head2 $request-E<gt>B<set_uri> ($uri)
+
+=over
+
+=item * $uri (string) 
+
+=back
+
+
+
+=cut
+
+
+=head1 PROPERTIES
+
+=over
+
+=item 'message' (Glib::Object::_Unregistered::SoupMessage : default undef : readable / writable / construct-only / private)
+
+The SoupMessage that backs the request.
+
+=item 'uri' (string : default undef : readable / writable / private)
+
+The URI to which the request will be made.
+
+=back
+
+
+
+=cut
+
+
+=head1 SEE ALSO
+
+L<Gtk2::WebKit>, L<Glib::Object>
+
+
+=cut
+
+
+=head1 COPYRIGHT
+
+Copyright (C) 2008, Florian Ragwitz
+
+
+=cut
+

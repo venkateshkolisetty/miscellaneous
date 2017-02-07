@@ -1,0 +1,109 @@
+=head1 NAME
+
+Gtk2::WebKit::WebDatabase
+
+=cut
+
+=head1 HIERARCHY
+
+  Glib::Object
+  +----Gtk2::WebKit::WebDatabase
+
+
+
+=cut
+
+
+=head1 METHODS
+
+=head2 Gtk2::WebKit::WebDatabase-E<gt>B<webkit_get_default_web_database_quota> 
+
+=head2 string = Gtk2::WebKit::WebDatabase-E<gt>B<webkit_get_web_database_directory_path> 
+
+=head2 Gtk2::WebKit::WebDatabase-E<gt>B<webkit_remove_all_web_databases> 
+
+=head2 Gtk2::WebKit::WebDatabase-E<gt>B<webkit_set_default_web_database_quota> ($default_quota)
+
+=over
+
+=item * $default_quota (64 bit unsigned) 
+
+=back
+
+=head2 Gtk2::WebKit::WebDatabase-E<gt>B<webkit_set_web_database_directory_path> ($path)
+
+=over
+
+=item * $path (string) 
+
+=back
+
+=head2 string = $web_database-E<gt>B<webkit_web_database_get_display_name> 
+
+=head2 64 bit unsigned = $web_database-E<gt>B<webkit_web_database_get_expected_size> 
+
+=head2 string = $web_database-E<gt>B<webkit_web_database_get_filename> 
+
+=head2 string = $web_database-E<gt>B<webkit_web_database_get_name> 
+
+=head2 securityorigin = $web_database-E<gt>B<webkit_web_database_get_security_origin> 
+
+=head2 64 bit unsigned = $web_database-E<gt>B<webkit_web_database_get_size> 
+
+=head2 $web_database-E<gt>B<webkit_web_database_remove> 
+
+
+
+=cut
+
+
+=head1 PROPERTIES
+
+=over
+
+=item 'display-name' (string : default undef : readable / private)
+
+The display name of the Web Storage database
+
+=item 'expected-size' (Glib::UInt64 : default 0 : readable / private)
+
+The expected size of the Web Database database
+
+=item 'filename' (string : default undef : readable / private)
+
+The absolute filename of the Web Storage database
+
+=item 'name' (string : default undef : readable / writable / construct-only)
+
+The name of the Web Database database
+
+=item 'security-origin' (Gtk2::WebKit::SecurityOrigin : default undef : readable / writable / construct-only)
+
+The security origin of the database
+
+=item 'size' (Glib::UInt64 : default 0 : readable / private)
+
+The current size of the Web Database database
+
+=back
+
+
+
+=cut
+
+
+=head1 SEE ALSO
+
+L<Gtk2::WebKit>, L<Glib::Object>
+
+
+=cut
+
+
+=head1 COPYRIGHT
+
+Copyright (C) 2008, Florian Ragwitz
+
+
+=cut
+

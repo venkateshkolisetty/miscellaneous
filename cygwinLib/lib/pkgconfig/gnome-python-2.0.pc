@@ -1,0 +1,13 @@
+prefix=/usr
+exec_prefix=/usr
+includedir=${prefix}/include
+datarootdir=/usr/share
+datadir=/usr/share
+
+defsdir=${datadir}/pygtk/2.0/defs
+argtypesdir=${datadir}/pygtk/2.0/argtypes
+
+Name: GNOME-python
+Description: Python bindings for GNOME libraries
+Version:   2.28.1
+Cflags: -I${includedir}/gnome-python-2.0

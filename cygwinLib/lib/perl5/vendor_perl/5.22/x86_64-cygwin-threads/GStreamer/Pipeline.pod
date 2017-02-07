@@ -1,0 +1,111 @@
+=head1 NAME
+
+GStreamer::Pipeline
+
+=cut
+
+=head1 HIERARCHY
+
+  Glib::Object
+  +----GStreamer::Object
+       +----GStreamer::Element
+            +----GStreamer::Bin
+                 +----GStreamer::Pipeline
+
+
+
+=cut
+
+=head1 INTERFACES
+
+  GStreamer::ChildProxy
+
+
+
+=cut
+
+
+=head1 METHODS
+
+=head2 element = GStreamer::Pipeline-E<gt>B<new> ($name)
+
+=over
+
+=item * $name (string or undef) 
+
+=back
+
+=head2 $pipeline-E<gt>B<auto_clock> 
+
+=head2 bus = $pipeline-E<gt>B<get_bus> 
+
+=head2 clock = $pipeline-E<gt>B<get_clock> 
+
+=head2 $pipeline-E<gt>B<set_clock> ($clock)
+
+=over
+
+=item * $clock (GStreamer::Clock) 
+
+=back
+
+=head2 unsigned integer = $pipeline-E<gt>B<get_last_stream_time> 
+
+=head2 $pipeline-E<gt>B<set_new_stream_time> ($time)
+
+=over
+
+=item * $time (unsigned integer) 
+
+=back
+
+=head2 $pipeline-E<gt>B<use_clock> ($clock)
+
+=over
+
+=item * $clock (GStreamer::Clock) 
+
+=back
+
+
+
+=cut
+
+
+=head1 PROPERTIES
+
+=over
+
+=item 'auto-flush-bus' (boolean : default true : readable / writable / private)
+
+Whether to automatically flush the pipeline's bus when going from READY into NULL state
+
+=item 'delay' (Glib::UInt64 : default 0 : readable / writable / private)
+
+Expected delay needed for elements to spin up to PLAYING in nanoseconds
+
+=back
+
+
+
+=cut
+
+
+=head1 SEE ALSO
+
+L<GStreamer>, L<Glib::Object>, L<GStreamer::Object>, L<GStreamer::Element>, L<GStreamer::Bin>
+
+
+=cut
+
+
+=head1 COPYRIGHT
+
+Copyright (C) 2005-2014 by the gtk2-perl team.
+
+This software is licensed under the LGPL.  See L<GStreamer> for a full notice.
+
+
+
+=cut
+

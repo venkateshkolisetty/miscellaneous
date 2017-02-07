@@ -1,0 +1,151 @@
+
+=head1 NAME
+
+GStreamer - API Reference Pod Index
+
+=head1 PAGES
+
+=over
+
+=item L<GStreamer::Bin>
+
+=item L<GStreamer::Buffer>
+
+=item L<GStreamer::Bus>
+
+=item L<GStreamer::Caps>
+
+=item L<GStreamer::Caps::Any>
+
+=item L<GStreamer::Caps::Empty>
+
+=item L<GStreamer::Caps::Full>
+
+=item L<GStreamer::Caps::Simple>
+
+=item L<GStreamer::ChildProxy>
+
+=item L<GStreamer::Clock>
+
+=item L<GStreamer::ClockID>
+
+=item L<GStreamer::Element>
+
+=item L<GStreamer::ElementFactory>
+
+=item L<GStreamer::Event>
+
+=item L<GStreamer::Event::BufferSize>
+
+=item L<GStreamer::Event::Custom>
+
+=item L<GStreamer::Event::EOS>
+
+=item L<GStreamer::Event::FlushStart>
+
+=item L<GStreamer::Event::FlushStop>
+
+=item L<GStreamer::Event::Navigation>
+
+=item L<GStreamer::Event::NewSegment>
+
+=item L<GStreamer::Event::QOS>
+
+=item L<GStreamer::Event::Seek>
+
+=item L<GStreamer::Event::Tag>
+
+=item L<GStreamer::Format>
+
+=item L<GStreamer::GhostPad>
+
+=item L<GStreamer::Index>
+
+=item L<GStreamer::IndexEntry>
+
+=item L<GStreamer::IndexFactory>
+
+=item L<GStreamer::Iterator>
+
+=item L<GStreamer::Iterator::Tie>
+
+=item L<GStreamer::Message>
+
+=item L<GStreamer::Message::Application>
+
+=item L<GStreamer::Message::AsyncDone>
+
+=item L<GStreamer::Message::AsyncStart>
+
+=item L<GStreamer::Message::ClockLost>
+
+=item L<GStreamer::Message::ClockProvide>
+
+=item L<GStreamer::Message::Custom>
+
+=item L<GStreamer::Message::Duration>
+
+=item L<GStreamer::Message::EOS>
+
+=item L<GStreamer::Message::Element>
+
+=item L<GStreamer::Message::Error>
+
+=item L<GStreamer::Message::Latency>
+
+=item L<GStreamer::Message::NewClock>
+
+=item L<GStreamer::Message::SegmentDone>
+
+=item L<GStreamer::Message::SegmentStart>
+
+=item L<GStreamer::Message::StateChanged>
+
+=item L<GStreamer::Message::StateDirty>
+
+=item L<GStreamer::Message::Tag>
+
+=item L<GStreamer::Message::Warning>
+
+=item L<GStreamer::MiniObject>
+
+=item L<GStreamer::Object>
+
+=item L<GStreamer::Pad>
+
+=item L<GStreamer::PadTemplate>
+
+=item L<GStreamer::Pipeline>
+
+=item L<GStreamer::Plugin>
+
+=item L<GStreamer::PluginFeature>
+
+=item L<GStreamer::Query>
+
+=item L<GStreamer::Query::Application>
+
+=item L<GStreamer::Query::Convert>
+
+=item L<GStreamer::Query::Duration>
+
+=item L<GStreamer::Query::Position>
+
+=item L<GStreamer::Query::Segment>
+
+=item L<GStreamer::QueryType>
+
+=item L<GStreamer::Registry>
+
+=item L<GStreamer::Structure>
+
+=item L<GStreamer::SystemClock>
+
+=item L<GStreamer::Tag>
+
+=item L<GStreamer::TagSetter>
+
+=item L<GStreamer::TypeFindFactory>
+
+=back
+

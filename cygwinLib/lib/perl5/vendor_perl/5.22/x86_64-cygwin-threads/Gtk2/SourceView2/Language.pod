@@ -1,0 +1,95 @@
+=head1 NAME
+
+Gtk2::SourceView2::Language
+
+=cut
+
+=head1 HIERARCHY
+
+  Glib::Object
+  +----Gtk2::SourceView2::Language
+
+
+
+=cut
+
+
+=head1 METHODS
+
+=head2 list = $language-E<gt>B<get_globs> 
+
+=head2 boolean = $language-E<gt>B<get_hidden> 
+
+=head2 string = $language-E<gt>B<get_id> 
+
+=head2 string or undef = $language-E<gt>B<get_metadata> ($name)
+
+=over
+
+=item * $name (string) 
+
+=back
+
+=head2 list = $language-E<gt>B<get_mime_types> 
+
+=head2 string = $language-E<gt>B<get_name> 
+
+=head2 string = $language-E<gt>B<get_section> 
+
+=head2 list = $language-E<gt>B<get_style_ids> 
+
+=head2 string or undef = $language-E<gt>B<get_style_name> ($style_id)
+
+=over
+
+=item * $style_id (string) 
+
+=back
+
+
+
+=cut
+
+
+=head1 PROPERTIES
+
+=over
+
+=item 'hidden' (boolean : default false : readable)
+
+Whether the language should be hidden from the user
+
+=item 'id' (string : default undef : readable)
+
+Language id
+
+=item 'name' (string : default undef : readable)
+
+Language name
+
+=item 'section' (string : default undef : readable)
+
+Language section
+
+=back
+
+
+
+=cut
+
+
+=head1 SEE ALSO
+
+L<Gtk2::SourceView2>, L<Glib::Object>
+
+
+=cut
+
+
+=head1 COPYRIGHT
+
+Copyright (C) 2009 by Emmanuel Rodriguez
+
+
+=cut
+

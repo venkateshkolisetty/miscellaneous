@@ -1,0 +1,156 @@
+=head1 NAME
+
+Gnome2::Wnck::Pager
+
+=cut
+
+=head1 HIERARCHY
+
+  Glib::Object
+  +----Glib::InitiallyUnowned
+       +----Gtk2::Object
+            +----Gtk2::Widget
+                 +----Gnome2::Wnck::Pager
+
+
+
+=cut
+
+=head1 INTERFACES
+
+  Glib::Object::_Unregistered::AtkImplementorIface
+  Gtk2::Buildable
+
+
+
+=cut
+
+
+=head1 METHODS
+
+=head2 widget = Gnome2::Wnck::Pager-E<gt>B<new> ($screen)
+
+=over
+
+=item * $screen (Gnome2::Wnck::Screen) 
+
+=back
+
+=head2 $pager-E<gt>B<set_display_mode> ($mode)
+
+=over
+
+=item * $mode (Gnome2::Wnck::PagerDisplayMode) 
+
+=back
+
+=head2 $pager-E<gt>B<set_n_rows> ($n_rows)
+
+=over
+
+=item * $n_rows (integer) 
+
+=back
+
+=head2 boolean = $pager-E<gt>B<set_orientation> ($orientation)
+
+=over
+
+=item * $orientation (Gtk2::Orientation) 
+
+=back
+
+=head2 $pager-E<gt>B<set_screen> ($screen)
+
+=over
+
+=item * $screen (Gnome2::Wnck::Screen) 
+
+=back
+
+=head2 $pager-E<gt>B<set_shadow_type> ($shadow_type)
+
+=over
+
+=item * $shadow_type (Gtk2::ShadowType) 
+
+=back
+
+=head2 $pager-E<gt>B<set_show_all> ($show_all_workspaces)
+
+=over
+
+=item * $show_all_workspaces (boolean) 
+
+=back
+
+
+
+=cut
+
+
+=head1 ENUMS AND FLAGS
+
+=head2 enum Gnome2::Wnck::PagerDisplayMode
+
+=over
+
+=item * 'name' / 'WNCK_PAGER_DISPLAY_NAME'
+
+=item * 'content' / 'WNCK_PAGER_DISPLAY_CONTENT'
+
+=back
+
+
+=head2 enum Gtk2::Orientation
+
+=over
+
+=item * 'horizontal' / 'GTK_ORIENTATION_HORIZONTAL'
+
+=item * 'vertical' / 'GTK_ORIENTATION_VERTICAL'
+
+=back
+
+
+=head2 enum Gtk2::ShadowType
+
+=over
+
+=item * 'none' / 'GTK_SHADOW_NONE'
+
+=item * 'in' / 'GTK_SHADOW_IN'
+
+=item * 'out' / 'GTK_SHADOW_OUT'
+
+=item * 'etched-in' / 'GTK_SHADOW_ETCHED_IN'
+
+=item * 'etched-out' / 'GTK_SHADOW_ETCHED_OUT'
+
+=back
+
+
+
+
+=cut
+
+
+=head1 SEE ALSO
+
+L<Gnome2::Wnck>, L<Glib::Object>, L<Glib::InitiallyUnowned>, L<Gtk2::Object>, L<Gtk2::Widget>
+
+
+=cut
+
+
+=head1 COPYRIGHT
+
+Copyright (C) 2003-2006 by the gtk2-perl team.
+
+This software is licensed under the LGPL.  See L<Gnome2::Wnck> for a full
+notice.
+
+
+
+=cut
+

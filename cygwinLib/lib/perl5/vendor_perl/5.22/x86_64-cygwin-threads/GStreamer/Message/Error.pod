@@ -1,0 +1,48 @@
+=head1 NAME
+
+GStreamer::Message::Error
+
+=cut
+
+
+=head1 METHODS
+
+=head2 GstMessage = GStreamer::Message::Error-E<gt>B<new> ($src, $error, $debug)
+
+=over
+
+=item * $src (GStreamer::Object) 
+
+=item * $error (scalar) 
+
+=item * $debug (string) 
+
+=back
+
+=head2 scalar = $message-E<gt>B<debug> 
+
+=head2 scalar = $message-E<gt>B<error> 
+
+
+
+=cut
+
+
+=head1 SEE ALSO
+
+L<GStreamer>
+
+
+=cut
+
+
+=head1 COPYRIGHT
+
+Copyright (C) 2005-2014 by the gtk2-perl team.
+
+This software is licensed under the LGPL.  See L<GStreamer> for a full notice.
+
+
+
+=cut
+

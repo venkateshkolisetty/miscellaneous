@@ -1,0 +1,691 @@
+=head1 NAME
+
+Gtk2::WebKit::WebView
+
+=cut
+
+=head1 HIERARCHY
+
+  Glib::Object
+  +----Glib::InitiallyUnowned
+       +----Gtk2::Object
+            +----Gtk2::Widget
+                 +----Gtk2::Container
+                      +----Gtk2::WebKit::WebView
+
+
+
+=cut
+
+=head1 INTERFACES
+
+  Glib::Object::_Unregistered::AtkImplementorIface
+  Gtk2::Buildable
+
+
+
+=cut
+
+
+=head1 METHODS
+
+=head2 widget = Gtk2::WebKit::WebView-E<gt>B<new> 
+
+=head2 webbackforwardlist = $web_view-E<gt>B<get_back_forward_list> 
+
+=head2 boolean = $web_view-E<gt>B<can_copy_clipboard> 
+
+=head2 boolean = $web_view-E<gt>B<can_cut_clipboard> 
+
+=head2 boolean = $web_view-E<gt>B<can_go_back> 
+
+=head2 boolean = $web_view-E<gt>B<can_go_back_or_forward> ($steps)
+
+=over
+
+=item * $steps (integer) 
+
+=back
+
+=head2 boolean = $web_view-E<gt>B<can_go_forward> 
+
+=head2 boolean = $web_view-E<gt>B<can_paste_clipboard> 
+
+=head2 boolean = $web_view-E<gt>B<can_redo> 
+
+=head2 boolean = $web_view-E<gt>B<can_show_mime_type> ($mime_type)
+
+=over
+
+=item * $mime_type (string) 
+
+=back
+
+=head2 boolean = $web_view-E<gt>B<can_undo> 
+
+=head2 $web_view-E<gt>B<copy_clipboard> 
+
+=head2 targetlist = $web_view-E<gt>B<get_copy_target_list> 
+
+=head2 string = $web_view-E<gt>B<get_custom_encoding> 
+
+=head2 $web_view-E<gt>B<set_custom_encoding> ($encoding)
+
+=over
+
+=item * $encoding (string) 
+
+=back
+
+=head2 $web_view-E<gt>B<cut_clipboard> 
+
+=head2 $web_view-E<gt>B<delete_selection> 
+
+=head2 boolean = $web_view-E<gt>B<get_editable> 
+
+=head2 $web_view-E<gt>B<set_editable> ($flag)
+
+=over
+
+=item * $flag (boolean) 
+
+=back
+
+=head2 string = $web_view-E<gt>B<get_encoding> 
+
+=head2 $web_view-E<gt>B<execute_script> ($script)
+
+=over
+
+=item * $script (string) 
+
+=back
+
+=head2 webframe = $web_view-E<gt>B<get_focused_frame> 
+
+=head2 boolean = $web_view-E<gt>B<get_full_content_zoom> 
+
+=head2 $web_view-E<gt>B<set_full_content_zoom> ($full_content_zoom)
+
+=over
+
+=item * $full_content_zoom (boolean) 
+
+=back
+
+=head2 $web_view-E<gt>B<go_back> 
+
+=head2 $web_view-E<gt>B<go_back_or_forward> ($steps)
+
+=over
+
+=item * $steps (integer) 
+
+=back
+
+=head2 $web_view-E<gt>B<go_forward> 
+
+=head2 boolean = $web_view-E<gt>B<go_to_back_forward_item> ($item)
+
+=over
+
+=item * $item (Gtk2::WebKit::WebHistoryItem) 
+
+=back
+
+=head2 boolean = $web_view-E<gt>B<has_selection> 
+
+=head2 $web_view-E<gt>B<set_highlight_text_matches> ($highlight)
+
+=over
+
+=item * $highlight (boolean) 
+
+=back
+
+=head2 string = $web_view-E<gt>B<get_icon_uri> 
+
+=head2 webinspector = $web_view-E<gt>B<get_inspector> 
+
+=head2 $web_view-E<gt>B<load_html_string> ($content, $base_uri)
+
+=over
+
+=item * $content (string) 
+
+=item * $base_uri (string) 
+
+=back
+
+=head2 $web_view-E<gt>B<load_request> ($request)
+
+=over
+
+=item * $request (Gtk2::WebKit::NetworkRequest) 
+
+=back
+
+=head2 loadstatus = $web_view-E<gt>B<get_load_status> 
+
+=head2 $web_view-E<gt>B<load_string> ($content, $content_mime_type, $content_encoding, $base_uri)
+
+=over
+
+=item * $content (string) 
+
+=item * $content_mime_type (string) 
+
+=item * $content_encoding (string) 
+
+=item * $base_uri (string) 
+
+=back
+
+=head2 $web_view-E<gt>B<load_uri> ($uri)
+
+=over
+
+=item * $uri (string) 
+
+=back
+
+=head2 webframe = $web_view-E<gt>B<get_main_frame> 
+
+=head2 $web_view-E<gt>B<set_maintains_back_forward_list> ($flag)
+
+=over
+
+=item * $flag (boolean) 
+
+=back
+
+=head2 integer = $web_view-E<gt>B<mark_text_matches> ($string, $case_sensitive, $limit)
+
+=over
+
+=item * $string (string) 
+
+=item * $case_sensitive (boolean) 
+
+=item * $limit (integer) 
+
+=back
+
+=head2 $web_view-E<gt>B<move_cursor> ($step, $count)
+
+=over
+
+=item * $step (Gtk2::MovementStep) 
+
+=item * $count (integer) 
+
+=back
+
+=head2 $web_view-E<gt>B<open> ($uri)
+
+=over
+
+=item * $uri (string) 
+
+=back
+
+=head2 $web_view-E<gt>B<paste_clipboard> 
+
+=head2 targetlist = $web_view-E<gt>B<get_paste_target_list> 
+
+=head2 double = $web_view-E<gt>B<get_progress> 
+
+=head2 $web_view-E<gt>B<redo> 
+
+=head2 $web_view-E<gt>B<reload> 
+
+=head2 $web_view-E<gt>B<reload_bypass_cache> 
+
+=head2 boolean = $web_view-E<gt>B<search_text> ($string, $case_sensitive, $forward, $wrap)
+
+=over
+
+=item * $string (string) 
+
+=item * $case_sensitive (boolean) 
+
+=item * $forward (boolean) 
+
+=item * $wrap (boolean) 
+
+=back
+
+=head2 $web_view-E<gt>B<select_all> 
+
+=head2 websettings = $web_view-E<gt>B<get_settings> 
+
+=head2 $web_view-E<gt>B<set_settings> ($settings)
+
+=over
+
+=item * $settings (Gtk2::WebKit::WebSettings) 
+
+=back
+
+=head2 $web_view-E<gt>B<stop_loading> 
+
+=head2 string = $web_view-E<gt>B<get_title> 
+
+=head2 boolean = $web_view-E<gt>B<get_transparent> 
+
+=head2 $web_view-E<gt>B<set_transparent> ($flag)
+
+=over
+
+=item * $flag (boolean) 
+
+=back
+
+=head2 $web_view-E<gt>B<undo> 
+
+=head2 $web_view-E<gt>B<unmark_text_matches> 
+
+=head2 string = $web_view-E<gt>B<get_uri> 
+
+=head2 boolean = $web_view-E<gt>B<get_view_source_mode> 
+
+=head2 $web_view-E<gt>B<set_view_source_mode> ($view_source_mode)
+
+=over
+
+=item * $view_source_mode (boolean) 
+
+=back
+
+=head2 cachemodel = Gtk2::WebKit::WebView-E<gt>B<webkit_get_cache_model> 
+
+=head2 Gtk2::WebKit::WebView-E<gt>B<webkit_set_cache_model> ($cache_model)
+
+=over
+
+=item * $cache_model (Gtk2::WebKit::CacheModel) 
+
+=back
+
+=head2 webwindowfeatures = $web_view-E<gt>B<get_window_features> 
+
+=head2 $web_view-E<gt>B<zoom_in> 
+
+=head2 double = $web_view-E<gt>B<get_zoom_level> 
+
+=head2 $web_view-E<gt>B<set_zoom_level> ($zoom_level)
+
+=over
+
+=item * $zoom_level (double) 
+
+=back
+
+=head2 $web_view-E<gt>B<zoom_out> 
+
+
+
+=cut
+
+
+=head1 PROPERTIES
+
+=over
+
+=item 'copy-target-list' (Gtk2::TargetList : default undef : readable / private)
+
+The list of targets this web view supports for clipboard copying
+
+=item 'custom-encoding' (string : default undef : readable / writable / private)
+
+The custom encoding of the web view
+
+=item 'editable' (boolean : default false : readable / writable / private)
+
+Whether content can be modified by the user
+
+=item 'encoding' (string : default undef : readable / private)
+
+The default encoding of the web view
+
+=item 'full-content-zoom' (boolean : default false : readable / writable / private)
+
+Whether the full content is scaled when zooming
+
+=item 'icon-uri' (string : default undef : readable / private)
+
+The URI for the favicon for the #WebKitWebView.
+
+=item 'im-context' (Gtk2::IMContext : default undef : readable / private)
+
+The GtkIMMultiContext for the #WebKitWebView.
+
+=item 'load-status' (Gtk2::WebKit::LoadStatus : default "finished" : readable / private)
+
+Determines the current status of the load
+
+=item 'paste-target-list' (Gtk2::TargetList : default undef : readable / private)
+
+The list of targets this web view supports for clipboard pasting
+
+=item 'progress' (double : default 1 : readable / private)
+
+Determines the current progress of the load
+
+=item 'self-scrolling' (boolean : default false : readable / writable / construct-only / private)
+
+Whether or not this WebView draws its own scrollbars.
+
+=item 'settings' (Gtk2::WebKit::WebSettings : default undef : readable / writable / private)
+
+An associated WebKitWebSettings instance
+
+=item 'title' (string : default undef : readable / private)
+
+Returns the @web_view's document title
+
+=item 'transparent' (boolean : default false : readable / writable / private)
+
+Whether content has a transparent background
+
+=item 'uri' (string : default undef : readable / private)
+
+Returns the current URI of the contents displayed by the @web_view
+
+=item 'view-mode' (WebKitWebViewViewMode : default "windowed" : readable / writable / private)
+
+The view-mode media feature for the #WebKitWebView.
+
+=item 'viewport-attributes' (Glib::Object::_Unregistered::WebKitViewportAttributes : default undef : readable / private)
+
+The associated WebKitViewportAttributes instance
+
+=item 'web-inspector' (Gtk2::WebKit::WebInspector : default undef : readable / private)
+
+The associated WebKitWebInspector instance
+
+=item 'window-features' (Gtk2::WebKit::WebWindowFeatures : default undef : readable / writable / private)
+
+An associated WebKitWebWindowFeatures instance
+
+=item 'zoom-level' (float : default 1 : readable / writable / private)
+
+The level of zoom of the content
+
+=back
+
+
+
+=cut
+
+
+=head1 SIGNALS
+
+=over
+
+=item B<load-finished> (Gtk2::WebKit::WebView, Gtk2::WebKit::WebFrame)
+
+=item B<icon-loaded> (Gtk2::WebKit::WebView, string)
+
+=item Gtk2::WebKit::WebView = B<create-web-view> (Gtk2::WebKit::WebView, Gtk2::WebKit::WebFrame)
+
+=item boolean = B<web-view-ready> (Gtk2::WebKit::WebView)
+
+=item boolean = B<close-web-view> (Gtk2::WebKit::WebView)
+
+=item WebKitNavigationResponse = B<navigation-requested> (Gtk2::WebKit::WebView, Gtk2::WebKit::WebFrame, Gtk2::WebKit::NetworkRequest)
+
+=item boolean = B<new-window-policy-decision-requested> (Gtk2::WebKit::WebView, Gtk2::WebKit::WebFrame, Gtk2::WebKit::NetworkRequest, Gtk2::WebKit::WebNavigationAction, Gtk2::WebKit::WebPolicyDecision)
+
+=item boolean = B<navigation-policy-decision-requested> (Gtk2::WebKit::WebView, Gtk2::WebKit::WebFrame, Gtk2::WebKit::NetworkRequest, Gtk2::WebKit::WebNavigationAction, Gtk2::WebKit::WebPolicyDecision)
+
+=item boolean = B<mime-type-policy-decision-requested> (Gtk2::WebKit::WebView, Gtk2::WebKit::WebFrame, Gtk2::WebKit::NetworkRequest, string, Gtk2::WebKit::WebPolicyDecision)
+
+=item B<window-object-cleared> (Gtk2::WebKit::WebView, Gtk2::WebKit::WebFrame, gpointer, gpointer)
+
+=item boolean = B<download-requested> (Gtk2::WebKit::WebView, Glib::Object)
+
+=item B<load-started> (Gtk2::WebKit::WebView, Gtk2::WebKit::WebFrame)
+
+=item B<load-committed> (Gtk2::WebKit::WebView, Gtk2::WebKit::WebFrame)
+
+=item B<load-progress-changed> (Gtk2::WebKit::WebView, integer)
+
+=item boolean = B<load-error> (Gtk2::WebKit::WebView, Gtk2::WebKit::WebFrame, string, Glib::Error)
+
+=item B<onload-event> (Gtk2::WebKit::WebView, Gtk2::WebKit::WebFrame)
+
+=item B<title-changed> (Gtk2::WebKit::WebView, Gtk2::WebKit::WebFrame, string)
+
+=item B<hovering-over-link> (Gtk2::WebKit::WebView, string, string)
+
+=item B<populate-popup> (Gtk2::WebKit::WebView, Gtk2::Menu)
+
+=item boolean = B<print-requested> (Gtk2::WebKit::WebView, Gtk2::WebKit::WebFrame)
+
+=item B<status-bar-text-changed> (Gtk2::WebKit::WebView, string)
+
+=item boolean = B<console-message> (Gtk2::WebKit::WebView, string, integer, string)
+
+=item boolean = B<script-alert> (Gtk2::WebKit::WebView, Gtk2::WebKit::WebFrame, string)
+
+=item boolean = B<script-confirm> (Gtk2::WebKit::WebView, Gtk2::WebKit::WebFrame, string, gpointer)
+
+=item boolean = B<script-prompt> (Gtk2::WebKit::WebView, Gtk2::WebKit::WebFrame, string, string, gpointer)
+
+=item B<select-all> (Gtk2::WebKit::WebView)
+
+=item B<cut-clipboard> (Gtk2::WebKit::WebView)
+
+=item B<copy-clipboard> (Gtk2::WebKit::WebView)
+
+=item B<paste-clipboard> (Gtk2::WebKit::WebView)
+
+=item B<undo> (Gtk2::WebKit::WebView)
+
+=item B<redo> (Gtk2::WebKit::WebView)
+
+=item boolean = B<move-cursor> (Gtk2::WebKit::WebView, Gtk2::MovementStep, integer)
+
+=item Gtk2::Widget = B<create-plugin-widget> (Gtk2::WebKit::WebView, string, string, GHashTable)
+
+=item B<database-quota-exceeded> (Gtk2::WebKit::WebView, Glib::Object, Glib::Object)
+
+=item B<resource-request-starting> (Gtk2::WebKit::WebView, Gtk2::WebKit::WebFrame, Gtk2::WebKit::WebResource, Gtk2::WebKit::NetworkRequest, Gtk2::WebKit::NetworkResponse)
+
+=item boolean = B<geolocation-policy-decision-requested> (Gtk2::WebKit::WebView, Gtk2::WebKit::WebFrame, Gtk2::WebKit::GeolocationPolicyDecision)
+
+=item B<geolocation-policy-decision-cancelled> (Gtk2::WebKit::WebView, Gtk2::WebKit::WebFrame)
+
+=item B<document-load-finished> (Gtk2::WebKit::WebView, Gtk2::WebKit::WebFrame)
+
+=item B<frame-created> (Gtk2::WebKit::WebView, Gtk2::WebKit::WebFrame)
+
+=item boolean = B<run-file-chooser> (Gtk2::WebKit::WebView, Glib::Object::_Unregistered::WebKitFileChooserRequest)
+
+=item boolean = B<should-begin-editing> (Gtk2::WebKit::WebView, Glib::Object::_Unregistered::WebKitDOMRange)
+
+=item boolean = B<should-end-editing> (Gtk2::WebKit::WebView, Glib::Object::_Unregistered::WebKitDOMRange)
+
+=item boolean = B<should-insert-node> (Gtk2::WebKit::WebView, Glib::Object::_Unregistered::WebKitDOMNode, Glib::Object::_Unregistered::WebKitDOMRange, WebKitInsertAction)
+
+=item boolean = B<should-insert-text> (Gtk2::WebKit::WebView, string, Glib::Object::_Unregistered::WebKitDOMRange, WebKitInsertAction)
+
+=item boolean = B<should-delete-range> (Gtk2::WebKit::WebView, Glib::Object::_Unregistered::WebKitDOMRange)
+
+=item boolean = B<should-show-delete-interface-for-element> (Gtk2::WebKit::WebView, Glib::Object::_Unregistered::WebKitDOMHTMLElement)
+
+=item boolean = B<should-change-selected-range> (Gtk2::WebKit::WebView, Glib::Object::_Unregistered::WebKitDOMRange, Glib::Object::_Unregistered::WebKitDOMRange, WebKitSelectionAffinity, boolean)
+
+=item boolean = B<should-apply-style> (Gtk2::WebKit::WebView, Glib::Object::_Unregistered::WebKitDOMCSSStyleDeclaration, Glib::Object::_Unregistered::WebKitDOMRange)
+
+=item B<editing-began> (Gtk2::WebKit::WebView)
+
+=item B<user-changed-contents> (Gtk2::WebKit::WebView)
+
+=item B<editing-ended> (Gtk2::WebKit::WebView)
+
+=item B<selection-changed> (Gtk2::WebKit::WebView)
+
+=item B<viewport-attributes-recompute-requested> (Gtk2::WebKit::WebView, Glib::Object::_Unregistered::WebKitViewportAttributes)
+
+=item B<viewport-attributes-changed> (Gtk2::WebKit::WebView, Glib::Object::_Unregistered::WebKitViewportAttributes)
+
+=item boolean = B<entering-fullscreen> (Gtk2::WebKit::WebView, Glib::Object::_Unregistered::WebKitDOMHTMLElement)
+
+=item boolean = B<leaving-fullscreen> (Gtk2::WebKit::WebView, Glib::Object::_Unregistered::WebKitDOMHTMLElement)
+
+=item B<resource-response-received> (Gtk2::WebKit::WebView, Gtk2::WebKit::WebFrame, Gtk2::WebKit::WebResource, Gtk2::WebKit::NetworkResponse)
+
+=item B<resource-load-finished> (Gtk2::WebKit::WebView, Gtk2::WebKit::WebFrame, Gtk2::WebKit::WebResource)
+
+=item B<resource-content-length-received> (Gtk2::WebKit::WebView, Gtk2::WebKit::WebFrame, Gtk2::WebKit::WebResource, integer)
+
+=item B<resource-load-failed> (Gtk2::WebKit::WebView, Gtk2::WebKit::WebFrame, Gtk2::WebKit::WebResource, Glib::Error)
+
+=item boolean = B<context-menu> (Gtk2::WebKit::WebView, Gtk2::Widget, Gtk2::WebKit::HitTestResult, boolean)
+
+=item B<set-scroll-adjustments> (Gtk2::WebKit::WebView, Gtk2::Adjustment, Gtk2::Adjustment)
+
+=back
+
+
+
+=cut
+
+
+=head1 ENUMS AND FLAGS
+
+=head2 enum Gtk2::MovementStep
+
+=over
+
+=item * 'logical-positions' / 'GTK_MOVEMENT_LOGICAL_POSITIONS'
+
+=item * 'visual-positions' / 'GTK_MOVEMENT_VISUAL_POSITIONS'
+
+=item * 'words' / 'GTK_MOVEMENT_WORDS'
+
+=item * 'display-lines' / 'GTK_MOVEMENT_DISPLAY_LINES'
+
+=item * 'display-line-ends' / 'GTK_MOVEMENT_DISPLAY_LINE_ENDS'
+
+=item * 'paragraphs' / 'GTK_MOVEMENT_PARAGRAPHS'
+
+=item * 'paragraph-ends' / 'GTK_MOVEMENT_PARAGRAPH_ENDS'
+
+=item * 'pages' / 'GTK_MOVEMENT_PAGES'
+
+=item * 'buffer-ends' / 'GTK_MOVEMENT_BUFFER_ENDS'
+
+=item * 'horizontal-pages' / 'GTK_MOVEMENT_HORIZONTAL_PAGES'
+
+=back
+
+
+=head2 enum Gtk2::WebKit::CacheModel
+
+=over
+
+=item * 'default' / 'WEBKIT_CACHE_MODEL_DEFAULT'
+
+=item * 'document-viewer' / 'WEBKIT_CACHE_MODEL_DOCUMENT_VIEWER'
+
+=item * 'web-browser' / 'WEBKIT_CACHE_MODEL_WEB_BROWSER'
+
+=item * 'document-browser' / 'WEBKIT_CACHE_MODEL_DOCUMENT_BROWSER'
+
+=back
+
+
+=head2 enum Gtk2::WebKit::LoadStatus
+
+=over
+
+=item * 'provisional' / 'WEBKIT_LOAD_PROVISIONAL'
+
+=item * 'committed' / 'WEBKIT_LOAD_COMMITTED'
+
+=item * 'finished' / 'WEBKIT_LOAD_FINISHED'
+
+=item * 'first-visually-non-empty-layout' / 'WEBKIT_LOAD_FIRST_VISUALLY_NON_EMPTY_LAYOUT'
+
+=item * 'failed' / 'WEBKIT_LOAD_FAILED'
+
+=back
+
+
+=head2 enum WebKitInsertAction
+
+=over
+
+=item * 'typed' / 'WEBKIT_INSERT_ACTION_TYPED'
+
+=item * 'pasted' / 'WEBKIT_INSERT_ACTION_PASTED'
+
+=item * 'dropped' / 'WEBKIT_INSERT_ACTION_DROPPED'
+
+=back
+
+
+=head2 enum WebKitNavigationResponse
+
+=over
+
+=item * 'accept' / 'WEBKIT_NAVIGATION_RESPONSE_ACCEPT'
+
+=item * 'ignore' / 'WEBKIT_NAVIGATION_RESPONSE_IGNORE'
+
+=item * 'download' / 'WEBKIT_NAVIGATION_RESPONSE_DOWNLOAD'
+
+=back
+
+
+=head2 enum WebKitSelectionAffinity
+
+=over
+
+=item * 'upstream' / 'WEBKIT_SELECTION_AFFINITY_UPSTREAM'
+
+=item * 'downstream' / 'WEBKIT_SELECTION_AFFINITY_DOWNSTREAM'
+
+=back
+
+
+=head2 enum WebKitWebViewViewMode
+
+=over
+
+=item * 'windowed' / 'WEBKIT_WEB_VIEW_VIEW_MODE_WINDOWED'
+
+=item * 'floating' / 'WEBKIT_WEB_VIEW_VIEW_MODE_FLOATING'
+
+=item * 'fullscreen' / 'WEBKIT_WEB_VIEW_VIEW_MODE_FULLSCREEN'
+
+=item * 'maximized' / 'WEBKIT_WEB_VIEW_VIEW_MODE_MAXIMIZED'
+
+=item * 'minimized' / 'WEBKIT_WEB_VIEW_VIEW_MODE_MINIMIZED'
+
+=back
+
+
+
+
+=cut
+
+
+=head1 SEE ALSO
+
+L<Gtk2::WebKit>, L<Glib::Object>, L<Glib::InitiallyUnowned>, L<Gtk2::Object>, L<Gtk2::Widget>, L<Gtk2::Container>
+
+
+=cut
+
+
+=head1 COPYRIGHT
+
+Copyright (C) 2008, Florian Ragwitz
+
+
+=cut
+

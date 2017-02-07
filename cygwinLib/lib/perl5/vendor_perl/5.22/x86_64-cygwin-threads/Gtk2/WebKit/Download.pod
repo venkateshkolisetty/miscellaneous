@@ -1,0 +1,156 @@
+=head1 NAME
+
+Gtk2::WebKit::Download
+
+=cut
+
+=head1 HIERARCHY
+
+  Glib::Object
+  +----Gtk2::WebKit::Download
+
+
+
+=cut
+
+
+=head1 METHODS
+
+=head2 download = Gtk2::WebKit::Download-E<gt>B<new> ($request)
+
+=over
+
+=item * $request (Gtk2::WebKit::NetworkRequest) 
+
+=back
+
+=head2 $download-E<gt>B<cancel> 
+
+=head2 64 bit unsigned = $download-E<gt>B<get_current_size> 
+
+=head2 string = $download-E<gt>B<get_destination_uri> 
+
+=head2 $download-E<gt>B<set_destination_uri> ($destination_uri)
+
+=over
+
+=item * $destination_uri (string) 
+
+=back
+
+=head2 double = $download-E<gt>B<get_elapsed_time> 
+
+=head2 networkrequest = $download-E<gt>B<get_network_request> 
+
+=head2 double = $download-E<gt>B<get_progress> 
+
+=head2 $download-E<gt>B<start> 
+
+=head2 downloadstatus = $download-E<gt>B<get_status> 
+
+=head2 string = $download-E<gt>B<get_suggested_filename> 
+
+=head2 64 bit unsigned = $download-E<gt>B<get_total_size> 
+
+=head2 string = $download-E<gt>B<get_uri> 
+
+
+
+=cut
+
+
+=head1 PROPERTIES
+
+=over
+
+=item 'current-size' (Glib::UInt64 : default 0 : readable / private)
+
+The length of the data already downloaded
+
+=item 'destination-uri' (string : default "" : readable / writable / private)
+
+The destination URI where to save the file
+
+=item 'network-request' (Gtk2::WebKit::NetworkRequest : default undef : readable / writable / construct-only / private)
+
+The network request for the URI that should be downloaded
+
+=item 'network-response' (Gtk2::WebKit::NetworkResponse : default undef : readable / writable / construct-only / private)
+
+The network response for the URI that should be downloaded
+
+=item 'progress' (double : default 1 : readable / private)
+
+Determines the current progress of the download
+
+=item 'status' (Gtk2::WebKit::DownloadStatus : default "created" : readable / private)
+
+Determines the current status of the download
+
+=item 'suggested-filename' (string : default "" : readable / private)
+
+The filename suggested as default when saving
+
+=item 'total-size' (Glib::UInt64 : default 0 : readable / private)
+
+The total size of the file
+
+=back
+
+
+
+=cut
+
+
+=head1 SIGNALS
+
+=over
+
+=item boolean = B<error> (Gtk2::WebKit::Download, integer, integer, string)
+
+=back
+
+
+
+=cut
+
+
+=head1 ENUMS AND FLAGS
+
+=head2 enum Gtk2::WebKit::DownloadStatus
+
+=over
+
+=item * 'error' / 'WEBKIT_DOWNLOAD_STATUS_ERROR'
+
+=item * 'created' / 'WEBKIT_DOWNLOAD_STATUS_CREATED'
+
+=item * 'started' / 'WEBKIT_DOWNLOAD_STATUS_STARTED'
+
+=item * 'cancelled' / 'WEBKIT_DOWNLOAD_STATUS_CANCELLED'
+
+=item * 'finished' / 'WEBKIT_DOWNLOAD_STATUS_FINISHED'
+
+=back
+
+
+
+
+=cut
+
+
+=head1 SEE ALSO
+
+L<Gtk2::WebKit>, L<Glib::Object>
+
+
+=cut
+
+
+=head1 COPYRIGHT
+
+Copyright (C) 2008, Florian Ragwitz
+
+
+=cut
+
