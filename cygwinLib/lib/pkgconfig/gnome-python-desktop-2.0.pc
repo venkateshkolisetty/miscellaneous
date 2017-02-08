@@ -1,9 +1,0 @@
-prefix=/usr
-exec_prefix=/usr
-includedir=${prefix}/include
-datarootdir=${prefix}/share
-datadir=${datarootdir}
-
-Name: GNOME-python
-Description: Python bindings for GNOME libraries
-Version: 2.32.0

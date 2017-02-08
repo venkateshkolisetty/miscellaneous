@@ -1,9 +1,0 @@
-prefix=/usr
-exec_prefix=/usr
-includedir=${prefix}/include
-
-Name: PyORBit
-Description: Python bindings for ORBit2
-Version: 2.24.0
-Requires: ORBit-2.0 >= 2.12
-Cflags: -I${includedir}/pyorbit-2
